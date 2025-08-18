@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema elementFormDefault="qualified" targetNamespace="Conditions" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsd_1="Conditions" xmlns:xsd_2="Common" xmlns:xsd_3="Arrangements">
+  <xsd:import namespace="Arrangements" schemaLocation="Arrangements_v1_12.xsd"/>
+  <xsd:import namespace="Common" schemaLocation="Common_v1_12.xsd"/>
+  <xsd:annotation>
+    <xsd:documentation>Factors which vary the performance of products, arrangements, etc.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:simpleType name="TermType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Days"/>
+      <xsd:enumeration value="Months"/>
+      <xsd:enumeration value="Years"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="AccrualSchedule">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="Id" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: ID
+Valid Values:
+Business Description: Unique identifier for the accrual schedule associated with a drawing.
+Comments</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="Typ" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Business Name:Type
+Valid Values:
+Business Description: Defines the type of accrual schedule. 
+Comments</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="Desc" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Description
+Valid Values:
+Business Description:Text description for the accrual schedule.
+Comments</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="FrequencyType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Annually"/>
+      <xsd:enumeration value="At Maturity"/>
+      <xsd:enumeration value="Biweekly"/>
+      <xsd:enumeration value="Daily"/>
+      <xsd:enumeration value="Irregular"/>
+      <xsd:enumeration value="Monthly"/>
+      <xsd:enumeration value="Quarterly"/>
+      <xsd:enumeration value="Semiannually"/>
+      <xsd:enumeration value="Weekly"/>
+      <xsd:enumeration value="Yearly"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="CertificateOfDepositTerms">
+    <xsd:sequence>
+      <xsd:element name="MatTermNbr" type="xsd:positiveInteger">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Maturity Term Number
+Valid Values: 
+Business Description: Identifies the number of units until maturity of the certificate of deposit for the term type.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="TermTyp" type="xsd_1:TermType">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Term Type
+Valid Values: 
+Days
+Months
+Years
+Business Description: Identifies the time increment the term number (TermNbr) is represented in.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="InterestCalculationMethod">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Continuous Compound"/>
+      <xsd:enumeration value="Daily Compound"/>
+      <xsd:enumeration value="Daily Simple"/>
+      <xsd:enumeration value="Pure Simple"/>
+      <xsd:enumeration value="S&amp;P 500"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="BasisDays">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="360"/>
+      <xsd:enumeration value="365"/>
+      <xsd:enumeration value="366"/>
+      <xsd:enumeration value="Actual"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="RateSchedule">
+    <xsd:sequence>
+      <xsd:element name="Rte" type="xsd:decimal">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Rate
+Valid Values: 
+Business Description: The interest rate associated with the rate schedule tier.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="MinBal" type="xsd_2:Amount">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Minimum Balance
+Valid Values:
+Business Description:  The minimum balance for an arrangement to receive the associated rate for the tier.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="MaxBal" type="xsd_2:Amount">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Maximum Balance
+Valid Values:
+Business Description:  The maximum balance for an arrangement to receive the associated rate for the tier.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="InterestPlan">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="StrtDte" type="xsd:date">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Start Date
+Valid Values: 
+Business Description: The date the interest plan started to be in effect.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="EndDte" type="xsd:date">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: End Date
+Valid Values: 
+Business Description: The date the interest plan ends.  
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="PlnId" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Plan Identifier
+Valid Values: 
+Business Description: The unique identifier assigned to an interest plan.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="PlnNme" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Plan Name
+Valid Values: 
+Business Description: The name of the interest plan.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="BalBasis" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Balance Basis
+Valid Values: 
+Daily Collected
+Investible
+Ledger
+Ledger Combined
+Minimum
+Business Description:  Balance basis used for interest calculation.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="BasisDays" type="xsd_1:BasisDays">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Basis Days
+Valid Values: 
+360
+365
+366
+Actual
+Business Description: This value is used for APY calculations and for interest calculation.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="AccrRteTypCde" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Accrual Rate Type Code
+Valid Values: 
+Business Description: Used to determine which rate to pay based on the account balance or number of transactions.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="RteSched" type="xsd_1:RateSchedule">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Rate Schedule 
+Valid Values: 
+Business Description: Contains the information for a rate schedule.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="RteSchedTypCde" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Rate Schedule Type Code
+Valid Values: 
+Business Description:  Indicates the type of tiered rate processing assigned.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="BnsIntPlnId" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Bonus Interest Plan Identifier
+Valid Values: 
+Business Description: Identifies the type of bonus interest plan associated with the interest plan.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="IntRte" type="xsd:decimal">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Interest Rate
+Valid Values: 
+Business Description: The interest rate associated with the interest plan.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="IntPmtMeth" type="xsd_3:PaymentMethod">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Interest Payment Method
+Valid Values:
+Check
+External Transfer
+Internal Transfer
+Reinvest
+Business Description: Identifies the interest payment method.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="IntCalMeth" type="xsd_1:InterestCalculationMethod">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Interest Calculation Method
+Valid Values: 
+Continuous Compound
+Daily Compound
+Daily Simple
+Pure Simple
+Business Description: This value is used for APY calculations, interest calculations, interest factor and effective yield.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="CertOfDpTrms" type="xsd_1:CertificateOfDepositTerms">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Certificate of Deposit Terms
+Valid Values: 
+Business Description: Contains certificate of deposit term information.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="IntTermFreqNbr" type="xsd:positiveInteger">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Interest Term Frequency Number
+Valid Values: 
+Business Description: Identifies the number of units interest is paid at the frequency type.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="IntTermFreqTyp" type="xsd_1:FrequencyType">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Interest Term Frequency Type
+Valid Values:
+Biweekly
+Daily
+Monthly
+Quarterly
+Weekly
+Yearly
+Business Description: Identifies the frequency type for the interest term.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LoanRateSchedule">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="RteTyp" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Rate Type
+Valid Values:
+Business Description: Defines the type of rate associated with a drawing (e.g. LIBOR, Prime rate etc.)
+Comments</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="TotRte" type="xsd:decimal">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Total Rate
+Valid Values:
+Business Description: Defines the total rate in effect including base rate as well as other applicable rates such as spread, reserve rate etc.
+Comments</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="RteMatDte" type="xsd:date">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Rate Maturity Date
+Valid Values:
+Business Description:Date defining when a rate will mature and no longer apply. 
+Comments</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

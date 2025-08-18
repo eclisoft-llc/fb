@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema elementFormDefault="qualified" targetNamespace="Types" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsd_1="Types">
+  <xsd:annotation>
+    <xsd:documentation>Specialized data types for entity attributes.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:simpleType name="LanguageTag">
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="5"/>
+      <xsd:pattern value="[a-z]{2}-[A-Z]{2}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

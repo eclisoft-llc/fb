@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema elementFormDefault="qualified" targetNamespace="Arrangements" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsd_1="Arrangements" xmlns:xsd_2="Common">
+  <xsd:import namespace="Common" schemaLocation="Common_v1_12.xsd"/>
+  <xsd:annotation>
+    <xsd:documentation>Agreements, contracts, deposit, loans, card, treaties and other arrangements between involved parties.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexType name="ArIdentifier">
+    <xsd:sequence>
+      <xsd:element name="EntprsArTyp" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Enterprise Arrangement Type
+Valid Values: 
+Bill Payment
+Certificate of Deposit
+Checking
+Commercial Loan
+Consumer eBanking
+Credit Card
+Credit Facility
+Deal
+Debit Card
+FE Defined
+General Ledger
+Individual Retirement
+Installment Loan
+Line of Credit
+Money Market
+Mortgage Loan
+Other Loan
+Savings
+Business Description:  Identifies the standardized arrangement type that is part of the key that uniquely identifies the arrangement within Enterprise Customer.
+Comments: An enumeration exists for the list of valid values, however the data type is string and the validation of the valid values is done through business logic and not through schema validation</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="ArPrfx" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Arrangement Prefix
+Valid Values: 
+Business Description: The arrangement prefix is a qualifier from the system of record as part of the key used to group Arrangements.  
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ArId" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Arrangement Identifier
+Valid Values: 
+Business Description: The arrangement Identifier is the identifier from the system of record. For example for account arrangements this will be the system of record (SOR) account number. 
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="SubArId" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Sub Arrangement Identifier
+Valid Values: 
+Business Description: Identifies the sub account number for system of record (SOR) that may have an account number for the customer then sub-accounts for each arrangement, for example CD number or note number.  
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ArKey">
+    <xsd:complexContent>
+      <xsd:extension base="xsd_1:ArIdentifier">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Sor" type="xsd_2:Sor">
+            <xsd:annotation>
+              <xsd:documentation>Business Name: System of Record  
+Valid Values: 
+Business Description: Contains components used to define the system of record (SOR).
+Comments: Each SOR field will have to be qualified as to what the system of record is in relationship to.  The business name will need a qualifier added to the dictionary link (e.g., IP, AR, FE, etc.)  and comments added.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

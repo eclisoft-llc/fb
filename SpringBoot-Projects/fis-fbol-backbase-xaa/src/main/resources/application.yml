@@ -1,0 +1,19 @@
+server.port: 9085
+
+spring:
+  profiles:
+    active: "dev"
+  main:
+    banner-mode: "off"
+  jpa:
+    properties.hibernate.format_sql: true
+    database: sql_server
+    hibernate:
+      ddl-auto: none
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: ${SQL_URL}
+    username: ${SQL_USER}
+    password: ${SQL_PASSWORD}
+  autoconfigure:
+    exclude: "org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration"

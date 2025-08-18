@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema elementFormDefault="qualified" targetNamespace="XPRetrieveIpAnlytcsMktDtlRsp" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsd_1="XPRetrieveIpAnlytcsMktDtlRsp" xmlns:xsd_2="Common" xmlns:xsd_3="XPInvolvedParty" xmlns:xsd_4="FisCommonRspHdr">
+  <xsd:import namespace="FisCommonRspHdr" schemaLocation="../FISCommonRspHdr/FISCommonRspHdr.xsd"/>
+  <xsd:import namespace="XPInvolvedParty" schemaLocation="../XPBusinessObjects/XPInvolvedParty_v1_9.xsd"/>
+  <xsd:import namespace="Common" schemaLocation="../XPBusinessObjects/Common_v1_12.xsd"/>
+  <xsd:complexType name="XPRetrieveIpAnlytcsMktDtlOso">
+    <xsd:sequence>
+      <xsd:element name="FeRspKey" type="xsd_2:FeResponseKey">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Business Name: Financial Entity Response Key&lt;br&gt;Valid Values:&lt;br&gt;Business Description: Contains key information identifying the financial entity associated with the response.&lt;br&gt;Comments: Even though FeId and SorFe are both optional, one or both must be returned from the service&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="IpAnlytcsMktDtl" type="xsd_3:IpAnalyticsMarketingDetail">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Business Name: Involved PartyAnalytics Marketing Detail&lt;br&gt;Valid Values:&lt;br&gt;Business Description: Contains the associated analytics marketing elements associated with the involved party.&lt;br&gt;Comments:&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="LstCntlOtpt" type="xsd_2:ListControlOutput">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Business Name: List Control Output&lt;br&gt;Valid Values: &lt;br&gt;Business Description: Contains output control information.&lt;br&gt;Comments:&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="XPRtrvIpAnlytcsMktDtlOso" type="xsd_1:XPRetrieveIpAnlytcsMktDtlOso"/>
+  <xsd:complexType name="XPRetrieveIpAnlytcsMktDtlRsp">
+    <xsd:sequence>
+      <xsd:element ref="xsd_4:RspHdr"/>
+      <xsd:element minOccurs="0" ref="xsd_1:XPRtrvIpAnlytcsMktDtlOso"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="XPRtrvIpAnlytcsMktDtlRsp" type="xsd_1:XPRetrieveIpAnlytcsMktDtlRsp"/>
+</xsd:schema>

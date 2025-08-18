@@ -1,0 +1,179 @@
+trigger:
+  branches:
+    include:
+      - develop
+
+resources:
+  - repo: self
+
+variables:
+
+  # Container registry service connection established during pipeline creation
+  ${{ if eq(variables['Build.SourceBranchName'], 'develop') }}:
+    dockerRegistryServiceConnection: '16ff6940-4f92-4a11-a431-2afd1e178978'
+    containerRegistry: 'fbcusbbdevcr01.azurecr.io'
+    imagePullSecret: 'fbcusbbdevcr015806a02a-auth'
+    namespaceName: 'fb-dev-001-AKS.fbdevfinite01'
+    deploymentYamlFile: 'deployment_dev.yml'
+  imageRepository: 'fbolbackbaseucicservice'
+  dockerfilePath: '**/Dockerfile'
+  tag: '$(Build.BuildId)'
+
+
+  # Agent VM image name
+  vmImageName: 'ubuntu-latest'
+
+
+stages:
+  - stage: Build_Maven
+    displayName: Build and Package Maven
+    jobs:
+      - job: MavenPackageAndPublishArtifacts
+        displayName: Maven Package and Publish Artifacts
+        pool:
+          vmImage: $(vmImageName)
+
+        steps:
+          - task: DownloadSecureFile@1
+            name: settings_xml
+            displayName: 'Download Maven settings.xml'
+            inputs:
+              secureFile: 'settings.xml'
+
+          - task: Maven@3
+            displayName: 'Maven Clean Install'
+            inputs:
+              mavenPomFile: 'pom.xml'
+              mavenOptions: '-Xss2M'
+              javaHomeOption: 'JDKVersion'
+              jdkVersionOption: '11'
+              jdkArchitectureOption: 'x64'
+              publishJUnitResults: true
+              testResultsFiles: '**/surefire-reports/TEST-*.xml'
+              goals: 'clean install'
+              options: '--settings $(settings_xml.secureFilePath)'
+
+          - task: CopyFiles@2
+            displayName: 'Copy JAR File to artifact staging directory'
+            inputs:
+              SourceFolder: '$(System.DefaultWorkingDirectory)'
+              Contents: '**/target/*.?(war|jar)'
+              TargetFolder: $(Build.ArtifactStagingDirectory)
+
+          - upload: $(Build.ArtifactStagingDirectory)
+            artifact: drop
+  - stage: Build
+    displayName: Build Docker Image
+    dependsOn: Build_Maven
+    jobs:
+      - job: Build
+        displayName: Build
+        pool:
+          vmImage: $(vmImageName)
+        steps:
+          - task: DownloadPipelineArtifact@2
+            inputs:
+              artifact: drop
+          - script: |
+              cd /home/vsts/work/1/s
+              mkdir target
+              cp /home/vsts/work/1/target/fbol-ucic-service-0.0.1-SNAPSHOT.jar /home/vsts/work/1/s/target/fbol-ucic-service-0.0.1-SNAPSHOT.jar
+              cd /home/vsts/work/1/s/target
+              mkdir -p dependency && (cd dependency; jar -xf ../*.jar)
+              cd /home/vsts/work/1/s/target/dependency
+              cd /home/vsts/work/1/s/
+           
+          - task: DownloadSecureFile@1
+            name: dataEncryptionCertificate
+            displayName: 'Download Data Encryption Certificate'
+            inputs:
+              ${{ if eq(variables['Build.SourceBranchName'], 'main') }}:
+                secureFile: 'replace_this_once_deployed_to_prod'
+              ${{ else }}:
+                secureFile: '434c5606d1e2d69a.crt'
+
+          - script: |
+              cp $(dataEncryptionCertificate.secureFilePath) $(System.DefaultWorkingDirectory)/434c5606d1e2d69a.crt
+              
+          - task: DownloadSecureFile@1
+            name: dataEncryptionCertificate2
+            displayName: 'Download Data Encryption Certificate2'
+            inputs:
+              ${{ if eq(variables['Build.SourceBranchName'], 'main') }}:
+                secureFile: 'replace_this_once_deployed_to_prod'
+              ${{ else }}:
+                secureFile: 'dih_rdy_cert_intermediate.cer'
+
+          - script: |
+              cp $(dataEncryptionCertificate2.secureFilePath) $(System.DefaultWorkingDirectory)/dih_rdy_cert_intermediate.cer
+              
+          - task: DownloadSecureFile@1
+            name: dataEncryptionCertificate3
+            displayName: 'Download Data Encryption Certificate3'
+            inputs:
+              ${{ if eq(variables['Build.SourceBranchName'], 'main') }}:
+                secureFile: 'replace_this_once_deployed_to_prod'
+              ${{ else }}:
+                secureFile: 'dih_rdy_cert_root.cer'
+
+          - script: |
+              cp $(dataEncryptionCertificate3.secureFilePath) $(System.DefaultWorkingDirectory)/dih_rdy_cert_root.cer
+              
+          - task: DownloadSecureFile@1
+            name: dataEncryptionCertificate4
+            displayName: 'Download Data Encryption Certificate4'
+            inputs:
+              ${{ if eq(variables['Build.SourceBranchName'], 'main') }}:
+                secureFile: 'replace_this_once_deployed_to_prod'
+              ${{ else }}:
+                secureFile: 'pinpoint.uat.firstbanks.net.2.pfx'
+
+          - script: |
+              cp $(dataEncryptionCertificate4.secureFilePath) $(System.DefaultWorkingDirectory)/pinpoint.uat.firstbanks.net.2.pfx
+
+          - task: Docker@2
+            displayName: Build and push an image to container registry
+            inputs:
+              command: buildAndPush
+              repository: $(imageRepository)
+              dockerfile: $(dockerfilePath)
+              containerRegistry: $(dockerRegistryServiceConnection)
+              tags: |
+                $(tag)
+
+          - upload: manifests
+            artifact: manifests
+
+  - stage: Deploy
+    displayName: Deploy stage
+    dependsOn: Build
+
+    jobs:
+      - deployment: Deploy
+        displayName: Deploy
+        pool:
+          vmImage: $(vmImageName)
+        environment: '$(namespaceName)'
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - task: KubernetesManifest@0
+                  displayName: Create imagePullSecret
+                  inputs:
+                    action: createSecret
+                    secretName: $(imagePullSecret)
+                    dockerRegistryEndpoint: $(dockerRegistryServiceConnection)
+
+                - task: KubernetesManifest@0
+                  displayName: Deploy to Kubernetes cluster
+                  inputs:
+                    action: deploy
+                    manifests: |
+                      $(Pipeline.Workspace)/manifests/$(deploymentYamlFile)
+                      $(Pipeline.Workspace)/manifests/service.yml
+                    imagePullSecrets: |
+                      $(imagePullSecret)
+                    containers: |
+                      $(containerRegistry)/$(imageRepository):$(tag)
+                    rolloutStatusTimeout: 450

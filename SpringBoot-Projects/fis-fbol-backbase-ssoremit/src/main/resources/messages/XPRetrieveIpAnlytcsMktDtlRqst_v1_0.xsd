@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema elementFormDefault="qualified" targetNamespace="XPRetrieveIpAnlytcsMktDtlRqst" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsd_1="XPRetrieveIpAnlytcsMktDtlRqst" xmlns:xsd_2="InvolvedParty" xmlns:xsd_3="Arrangements" xmlns:xsd_4="Common" xmlns:xsd_5="FisCommonRqstHdr">
+  <xsd:import namespace="FisCommonRqstHdr" schemaLocation="../FISCommonRqstHdr/FISCommonRqstHdr.xsd"/>
+  <xsd:import namespace="Common" schemaLocation="../XPBusinessObjects/Common_v1_12.xsd"/>
+  <xsd:import namespace="Arrangements" schemaLocation="../XPBusinessObjects/Arrangements_v1_12.xsd"/>
+  <xsd:import namespace="InvolvedParty" schemaLocation="../XPBusinessObjects/InvolvedParty_v1_12.xsd"/>
+  <xsd:complexType name="IpArKey">
+    <xsd:annotation>
+      <xsd:documentation>&lt;p&gt;Business Name: Involved Party Arrangement Key&lt;br&gt;Valid Values:&lt;br&gt;Business Description: Contains either involved party key or arrangement key details.&lt;br&gt;Comments:&lt;/p&gt;</xsd:documentation>
+    </xsd:annotation>
+    <xsd:choice>
+      <xsd:element name="IpKey" type="xsd_2:IpKey">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Business Name: Involved Party Key&lt;br&gt;Valid Values:&lt;br&gt;Business Description: Contains involved party identifier along with the SOR details of the involved party.&lt;br&gt;Comments:&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ArKey" type="xsd_3:ArKey">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Business Name: Arrangement Key&lt;br&gt;Valid Values:&lt;br&gt;Business Description: Contains arrangement identifier details along with the SOR details of the arrangement. &lt;br&gt;Comments:&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:choice>
+  </xsd:complexType>
+  <xsd:complexType name="XPRetrieveIpAnlytcsMktDtlOsi">
+    <xsd:sequence>
+      <xsd:element name="FeRqstKey" type="xsd_4:FeRequestKey">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Business Name: Financial Entity Request Key&lt;br&gt;Valid Values:&lt;br&gt;Business Description: Contains the specific financial entity key request information.&lt;br&gt;Comments:&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="IpArKey" type="xsd_1:IpArKey">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Business Name: Involved Party Arrangement Key&lt;br&gt;Valid Values:&lt;br&gt;Business Description: Contains either involved party key or arrangement key details.&lt;br&gt;Comments:&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="RqstAccTyp" type="xsd_4:RequestAccessType">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Business Name: Request Access Type&lt;br&gt;Valid Values: Admin User, Customer, System&lt;br&gt;Business Description: Indicates the type of access requested in the service call to the system &lt;br&gt;Comments:&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="LstCntl" type="xsd_4:ListControl">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Business Name: List Control&lt;br&gt;Valid Values: &lt;br&gt;Business Description: List Control information to be used to limit the number of responses returned.  Additionally, If more than the list control value exists a next page concept may be employed to return the next set of instances. &lt;br&gt;Comments:&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="XPRtrvIpAnlytcsMktDtlOsi" type="xsd_1:XPRetrieveIpAnlytcsMktDtlOsi"/>
+  <xsd:complexType name="XPRetrieveIpAnlytcsMktDtlRqst">
+    <xsd:sequence>
+      <xsd:element ref="xsd_5:RqstHdr"/>
+      <xsd:element ref="xsd_1:XPRtrvIpAnlytcsMktDtlOsi"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="XPRtrvIpAnlytcsMktDtlRqst" type="xsd_1:XPRetrieveIpAnlytcsMktDtlRqst"/>
+</xsd:schema>

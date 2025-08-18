@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema elementFormDefault="qualified" targetNamespace="XPSecurity" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsd_1="XPSecurity" xmlns:xsd_2="Common" xmlns:xsd_3="Security">
+  <xsd:import namespace="Security" schemaLocation="Security_v1_12.xsd"/>
+  <xsd:import namespace="Common" schemaLocation="Common_v1_12.xsd"/>
+  <xsd:annotation>
+    <xsd:documentation>&lt;p&gt;&lt;/p&gt;</xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexType name="SecurityPermissionData">
+    <xsd:sequence>
+      <xsd:element name="SecPermId" type="xsd_2:ComponentIdentifier">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Security Permission Identifier
+Valid Values: 
+Business Description: Unique identifier used to identify the entitlement Permission.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="SecPerm" type="xsd_3:SecurityPermission">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Security Permission 
+Valid Values: 
+Business Description: Aggregate containing details regarding the entitlement Permission.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

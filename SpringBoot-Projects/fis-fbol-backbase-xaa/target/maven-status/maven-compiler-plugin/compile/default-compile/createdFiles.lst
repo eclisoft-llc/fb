@@ -1,0 +1,7 @@
+com\fbol\xaa\model\orm\Imapper.class
+com\fbol\xaa\config\XaaConfig.class
+com\fbol\xaa\controller\XaaController.class
+com\fbol\xaa\XaaApplication.class
+com\fbol\xaa\model\Xaa.class
+com\fbol\xaa\model\Input$RequestType.class
+com\fbol\xaa\model\Input.class

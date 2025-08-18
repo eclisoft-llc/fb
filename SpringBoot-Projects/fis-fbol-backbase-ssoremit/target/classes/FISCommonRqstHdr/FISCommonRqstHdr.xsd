@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema elementFormDefault="qualified" targetNamespace="FisCommonRqstHdr" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsd_1="FisCommonRqstHdr">
+  <xsd:simpleType name="tLocale">
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="5"/>
+      <xsd:pattern value="[a-z]{2}-[A-Z]{2}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="tUuid">
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="36"/>
+      <xsd:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="tRqstHdr">
+    <xsd:sequence>
+      <xsd:element name="RqstHdrVer">
+        <xsd:annotation>
+          <xsd:documentation>Request Header Version. Currently 2.0.0</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="2.0.0"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="MsgUuid">
+        <xsd:annotation>
+          <xsd:documentation>UUID - can be reused across service invocations for
+							tracking.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd_1:tUuid">
+            <xsd:length value="36"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="SrcId" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Vendor or source identifier for this request</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="ActyId" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Consumer defined used for tracking purposes.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="TstInd">
+        <xsd:annotation>
+          <xsd:documentation>A value of "Y" in this field indicates test mode
+							processing. Test mode processing will result in the transaction
+							processing normal until the end of the transaction when all data
+							or status changes will be rescinded.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="Y"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="LclPref">
+        <xsd:annotation>
+          <xsd:documentation>Preferred locale of this request. Must follow standard
+							specificed by internationalization project RFC4646. Format is two
+							letters followed by a dash followed by two letters, example:
+							en-US</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd_1:tLocale"/>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="PrcsRules" type="xsd_1:tPrcsRules">
+        <xsd:annotation>
+          <xsd:documentation>Processing options for bundled services
+											</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Sec">
+        <xsd:complexType>
+          <xsd:choice>
+            <xsd:element name="Trusted">
+              <xsd:annotation>
+                <xsd:documentation>A value of "Y" in this field indicates no
+								authentication required	</xsd:documentation>
+              </xsd:annotation>
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:enumeration value="Y"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="BasicAuthen">
+              <xsd:annotation>
+                <xsd:documentation>UserId and Password credentials</xsd:documentation>
+              </xsd:annotation>
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="UsrId" type="xsd:string"/>
+                  <xsd:element name="Pswrd" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="SessAuthen">
+              <xsd:annotation>
+                <xsd:documentation>Session Identifier</xsd:documentation>
+              </xsd:annotation>
+              <xsd:complexType>
+                <xsd:choice>
+                  <xsd:element name="SessId" type="xsd:string"/>
+                  <xsd:element name="HttpSessId" type="xsd:string"/>
+                </xsd:choice>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="TokenAuthen">
+              <xsd:annotation>
+                <xsd:documentation>Security Token, e.g., SAML, SLAPI, Username, other</xsd:documentation>
+              </xsd:annotation>
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:any maxOccurs="unbounded" minOccurs="0" namespace="##any" processContents="lax"/>
+                </xsd:sequence>
+                <xsd:anyAttribute namespace="##any" processContents="lax"/>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="WsSec">
+              <xsd:annotation>
+                <xsd:documentation>A value of "Y" in this field indicates
+								WS-Security used for authentication</xsd:documentation>
+              </xsd:annotation>
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:enumeration value="Y"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+          </xsd:choice>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ServPrmtrsLst">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="ServPrmtrs">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="FeId" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>Financial Entity Identifier</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element name="ServId" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>Service Identifier</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element name="ServVer" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>Version number. Format is major.minor.revision </xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element name="ApplId" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>Application associated with this service request.	</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="DataLnkId" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>Unique identifier used to correlate service
+									parameters to a matching message Section in the request. Used for bundled
+									service requests.</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="FldLst">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element maxOccurs="unbounded" name="Fld">
+                          <xsd:complexType>
+                            <xsd:sequence>
+                              <xsd:element name="FldNme" type="xsd:string"/>
+                              <xsd:element name="FldVal" type="xsd:string"/>
+                            </xsd:sequence>
+                          </xsd:complexType>
+                        </xsd:element>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="tPrcsRules">
+    <xsd:sequence>
+      <xsd:element name="PrcsRule">
+        <xsd:annotation>
+          <xsd:documentation>Enumeration
+							PrcsAsTxn = Process this request using single commit point.
+							PrcsAsTranStpOnFrstErr = Process this request using single commit
+							point. Stop processing when the first error is encountered.
+							PrcsAsMultiServ = Process each service as an individual service</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="PrcsAsTxn"/>
+            <xsd:enumeration value="PrcsAsTranStpOnFrstErr"/>
+            <xsd:enumeration value="PrcsAsMultiServ"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="RunAs" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>An option directive for executing services from multiple
+							applications under a single application ID</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="FeId" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Financial Entity Identifier associated with the services
+							bundle</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ServId" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Service Identifier for the services bundle.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ServVer" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Version number of the services bundle. Format is
+							major.minor.revision </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ApplId" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Application associated with this services bundle	</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="RqstHdr" type="xsd_1:tRqstHdr"/>
+</xsd:schema>

@@ -1,0 +1,19 @@
+server.port: 9085
+
+spring:
+  profiles:
+    active: "dev"
+  main:
+    banner-mode: "off"
+  jpa:
+    properties.hibernate.format_sql: true
+    database: sql_server
+    hibernate:
+      ddl-auto: none
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: "jdbc:sqlserver://fb-uc-bb-dev-ssv-01.privatelink.database.windows.net:1433;database=xaa;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30"
+    username: "sv_xaa_dev"
+    password: "@pm2hHRd!ym(AY3W"
+  autoconfigure:
+    exclude: "org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration"

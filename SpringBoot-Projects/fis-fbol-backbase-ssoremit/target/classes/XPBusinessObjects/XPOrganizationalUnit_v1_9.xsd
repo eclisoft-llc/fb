@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema elementFormDefault="qualified" targetNamespace="XPOrganizationalUnit" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsd_1="XPOrganizationalUnit" xmlns:xsd_2="Common" xmlns:xsd_3="Security" xmlns:xsd_4="InvolvedParty" xmlns:xsd_5="OrganizationalUnit" xmlns:xsd_6="ContactPoint">
+  <xsd:import namespace="ContactPoint" schemaLocation="ContactPoint_v1_12.xsd"/>
+  <xsd:import namespace="OrganizationalUnit" schemaLocation="OrganizationalUnit_v1_12.xsd"/>
+  <xsd:import namespace="InvolvedParty" schemaLocation="InvolvedParty_v1_12.xsd"/>
+  <xsd:import namespace="Security" schemaLocation="Security_v1_12.xsd"/>
+  <xsd:import namespace="Common" schemaLocation="Common_v1_12.xsd"/>
+  <xsd:complexType name="EmployeeAndUserDetailFilter">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="InclAdtDtlInd" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Business Name: Include Audit Detail Indicator&lt;br&gt;Valid Values:&lt;br&gt;Business Description: Indicates weather the Audit information of the user record should be included.&lt;br&gt;Comments:&lt;br&gt;&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="InclEmailAddrInd" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Include Email Address Indicator
+Valid Values: 
+Business Description: Indicates whether the e-mail address details for the User should be included.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="InclPhNbrInd" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Include Phone Number Indicator
+Valid Values: 
+Business Description: Indicates whether the phone number for the User should be included.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="EmployeeAndUserCriteria">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="OuId" type="xsd_2:OrgUnitId">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Ou Id
+Valid Values: 
+Business Description: Identifies the Ou to which employee or user is assigned.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="UsrSecId" type="xsd_3:UserSecurityIdentity">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Employee and User Id
+Valid Values: 
+Business Description: Unique identifier of the employee or the use.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="AbrgdNme" type="xsd_4:AbridgedName">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Abridged Name
+Valid Values: 
+Business Description: Abridged Name of the employee or the user.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="CmptUsrId" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Component User Id
+Valid Values: 
+Business Description: The user identifier associated with the specific component.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="Stat" type="xsd_5:UserStatus">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Status
+Valid Values: .n Process
+Pending Approval
+Approved
+Suspended
+Terminated
+Business Description: Identifies the current status of the user.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="CurInd" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation>Business Name:  Include Current Indicator
+Valid Values: 
+Business Description: If this field is true only User with a StrtDte equal to or less than the current processing date and an EndDte equal to or greater than the current processing date are returned.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="HistInd" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Include Historical Indicator
+Valid Values: 
+Business Description: If this field is tru only User  with a an EndDte less than the current processing date are returned.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="FtrInd" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Include Future Indicator
+Valid Values: 
+Business Description: If this field is true only User with a StrtDte greater than the current processing date are returned.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="EmployeeAndUserInfo">
+    <xsd:sequence>
+      <xsd:element name="EmpAndUsrDtl" type="xsd_5:EmployeeAndUserDetail">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Employee and User Details
+Valid Values:
+Business Description: Employee and User Details
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="Ph" type="xsd_6:Phone">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Business Name: Phone&lt;br&gt;Valid Values:&lt;br&gt;Business Description: Phone details of the employee or User.&lt;br&gt;Comments:&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="EmailAddr" type="xsd_6:EmailAddress">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Business Name: Email Address&lt;br&gt;Valid Values:&lt;br&gt;Business Description: Email Address details of the Employee or User.&lt;br&gt;Comments:&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="AdtDtl" type="xsd_2:AuditDetail">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Audit Detail
+Valid Values:
+Business Description: Audit Details of the Employee and User Record
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="EmployeeAndUserDetailInformation">
+    <xsd:sequence>
+      <xsd:element name="UsrSecId" type="xsd_3:UserSecurityIdentity"/>
+      <xsd:element name="EmpAndUsrInfo" type="xsd_1:EmployeeAndUserInfo">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Employee And User Summary
+Valid Values:
+Business Description: Summary Information of employee or the user.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="OuLcle" type="xsd_2:OrgUnitLocale">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Locale
+Valid Values:
+Business Description: Information related to the Locales applicable to the Employee or User.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="OuSumm" type="xsd_5:OrgUnitSummary">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Business Name: Organization Unit relationship&lt;br&gt;Valid Values:&lt;br&gt;Business Description: Org Unit information of the User.&lt;br&gt;Comments:&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="EmpAndUsrCmptCrdntl" type="xsd_3:EmployeeAndUserComponentCredential">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: User Component Credential
+Valid Values:
+Business Description: The compnent credentials of the User. 
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="Role" type="xsd_5:RoleRelationship">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Role
+Valid Values:
+Business Description: Roles assigned to the User.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="UsrAcc" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: User Access
+Valid Values:
+Business Description: The access type associated with the user.
+Comments: Examples:  Front Office, Back Office, Administrator, Borrower, and Contractor.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="JobFunctionListCriteria">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="JobFuncNme" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Job Function Name
+Valid Values:
+Business Description: Name of the job function.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="JobFuncStat" type="xsd_5:JobFunctionStatus">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Job Function Status
+Valid Values:
+Approved
+Inactive
+In Process
+Pending Approval
+Business Description: Status of the job function.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="RoleKey">
+    <xsd:sequence>
+      <xsd:element name="RoleId" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Role Identifier
+Valid Values:
+Business Description: Unique identifier of a role.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="CmptId" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Component Identifier
+Valid Values:
+Business Description: Unique identifier of a component.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="JobFunctionRoleRelationshipKey">
+    <xsd:choice>
+      <xsd:element name="JobFuncId" type="xsd_5:JobFunctionId">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Job Function Identifier
+Valid Values:
+Business Description: The unique identifier of the job function associated with the Organization Unit.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="RoleKey" type="xsd_1:RoleKey">
+        <xsd:annotation>
+          <xsd:documentation>Business Name:Role Key
+Valid Values:;
+Business Description: Contains key information for Role. Comprises of Role Identifier and Component Identifier associated with Role.
+Comments:;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:choice>
+  </xsd:complexType>
+  <xsd:complexType name="JobFunctionRelationship">
+    <xsd:sequence>
+      <xsd:element name="StrtDte" type="xsd:date">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Start Date
+Valid Values:
+Business Description: Date that the JobFunction relationship begins.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="EndDte" type="xsd:date">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: End Date
+Valid Values:
+Business Description: Date that the JobFunction relationship ends.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="JobFuncId" type="xsd_5:JobFunctionId">
+        <xsd:annotation>
+          <xsd:documentation>Business Name:Job Function Identifier
+Valid Values:;
+Business Description: Unique identifier of the Job Function
+Comments:;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="JobFunctionRelationshipDetail">
+    <xsd:complexContent>
+      <xsd:extension base="xsd_1:JobFunctionRelationship">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="JobFuncNme" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Business Name: Job Function Name
+Valid Values:
+Business Description: Name of the job function.
+Comments:</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="FeFilter">
+    <xsd:sequence>
+      <xsd:element name="FeTyp" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Financial Entity Type
+Valid Values:
+Business Description: Financial Entity Type;
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="FeStat" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Financial Entity Status
+Valid Values:
+Business Description: Financial Entity Status.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="SorListFilter">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="OuId" type="xsd_2:OrgUnitId">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Organization Unit Identifier
+Valid Values:
+Business Description: Unique Identifier for the Organization Unit.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="InclProdLne" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Include Product Line
+Valid Values:;
+Business Description: Flag to return Product Line information
+Comments:;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="FeOrgStructureDetailFilter">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="OrgUnitId" type="xsd_2:OrgUnitId">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Include Organization Unit Identifier
+Valid Values:;
+Business Description: Flag to return Organization Unit Identifier
+Comments:;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="InclFe" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Include Fe
+Valid Values:;
+Business Description: Flag to return the FE-Type Organization Unit data 
+Comments:;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="InclLce" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Include Sor
+Valid Values:;
+Business Description: Flag to return the FE-Type Organization Unit data 
+Comments:;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="InclCrncy" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Include Currency
+Valid Values:;
+Business Description: Flag to return Currency information
+Comments:;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="InclPoc" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Include Channel Application
+Valid Values:;
+Business Description: Flag to return Channel Application information
+Comments:;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="InclChanAppl" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Include Calendar
+Valid Values:;
+Business Description: Flag to return Calendar information
+Comments:;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="InclProdLne" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Include Product Line
+Valid Values:;
+Business Description: Flag to return Product Line information
+Comments:;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="InclAtt" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Include Attribute 
+Valid Values:;
+Business Description: Flag to return Organization Unit attribute information
+Comments:;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="InclCal" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Include Calendar 
+Valid Values:;
+Business Description: Flag to return Calendar information
+Comments:;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="InclCmpt" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Include Component 
+Valid Values:;
+Business Description: Flag to return Component information
+Comments:;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="InclAccTyp" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Include Access Type 
+Valid Values:;
+Business Description: Flag to return User  Access Type information
+Comments:;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="InclJobFunc" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Include Job Function 
+Valid Values:;
+Business Description: Flag to return Job Function information
+Comments:;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>
