@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema elementFormDefault="qualified" targetNamespace="XPCommon" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsd_1="XPCommon" xmlns:xsd_2="Common">
+  <xsd:import namespace="Common" schemaLocation="Common_v1_12.xsd"/>
+  <xsd:annotation>
+    <xsd:documentation>Contains common objects shared across all business domains. Example: common enumerations (valid values), amount constructs and other  reusable "data type" definitions.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexType name="InquiryFilter">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="InclCurr" type="xsd:boolean"/>
+      <xsd:element minOccurs="0" name="InclHist" type="xsd:boolean"/>
+      <xsd:element minOccurs="0" name="InclFutr" type="xsd:boolean"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="InquiryRequest">
+    <xsd:complexContent>
+      <xsd:extension base="xsd_2:RequestAccessType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="InqFltr" type="xsd_1:InquiryFilter"/>
+          <xsd:element minOccurs="0" name="BusEffDte" type="xsd:date"/>
+          <xsd:element minOccurs="0" name="HistInqUtcTs" type="xsd:dateTime"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

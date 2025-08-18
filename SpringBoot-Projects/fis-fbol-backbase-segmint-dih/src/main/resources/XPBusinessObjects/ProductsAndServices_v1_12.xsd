@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema elementFormDefault="qualified" targetNamespace="ProductsAndServices" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsd_1="ProductsAndServices">
+  <xsd:annotation>
+    <xsd:documentation>Products and services of interest to the business.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:simpleType name="ProductGroup">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Account Analysis"/>
+      <xsd:enumeration value="Annuities"/>
+      <xsd:enumeration value="ATM - Debit Card"/>
+      <xsd:enumeration value="Bill Payment"/>
+      <xsd:enumeration value="Business Online Banking"/>
+      <xsd:enumeration value="CD"/>
+      <xsd:enumeration value="Checking"/>
+      <xsd:enumeration value="Collection"/>
+      <xsd:enumeration value="Commercial"/>
+      <xsd:enumeration value="Consumer Online Banking"/>
+      <xsd:enumeration value="Credit Card"/>
+      <xsd:enumeration value="Equities"/>
+      <xsd:enumeration value="Fixed Income"/>
+      <xsd:enumeration value="Installment"/>
+      <xsd:enumeration value="Letters of Credit"/>
+      <xsd:enumeration value="LOC"/>
+      <xsd:enumeration value="LOC Debit Card"/>
+      <xsd:enumeration value="Lockbox"/>
+      <xsd:enumeration value="Mobile Banking"/>
+      <xsd:enumeration value="Money Market"/>
+      <xsd:enumeration value="Mortgage"/>
+      <xsd:enumeration value="People Pay"/>
+      <xsd:enumeration value="Positive Pay"/>
+      <xsd:enumeration value="Relationship Pricing"/>
+      <xsd:enumeration value="Remote Deposit Capture"/>
+      <xsd:enumeration value="Safe Deposit Box"/>
+      <xsd:enumeration value="Savings"/>
+      <xsd:enumeration value="Term Life"/>
+      <xsd:enumeration value="Trade Finance"/>
+      <xsd:enumeration value="VRU - IVR"/>
+      <xsd:enumeration value="Whole Life"/>
+      <xsd:enumeration value="Other"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ProductLine">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Deposit"/>
+      <xsd:enumeration value="eBanking"/>
+      <xsd:enumeration value="Insurance"/>
+      <xsd:enumeration value="Investment"/>
+      <xsd:enumeration value="Lending"/>
+      <xsd:enumeration value="Pricing"/>
+      <xsd:enumeration value="Service"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

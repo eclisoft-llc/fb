@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema elementFormDefault="qualified" targetNamespace="XPInvolvedParty" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsd_1="XPInvolvedParty" xmlns:xsd_2="InvolvedParty" xmlns:xsd_3="Communication">
+  <xsd:import namespace="Communication" schemaLocation="Communication_v1_12.xsd"/>
+  <xsd:import namespace="InvolvedParty" schemaLocation="InvolvedParty_v1_12.xsd"/>
+  <xsd:annotation>
+    <xsd:documentation>People or organizations that are in any way involved with the business.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexType name="IpAnalyticsMarketingDetail">
+    <xsd:annotation>
+      <xsd:documentation>&lt;p&gt;Business Name: Involved PartyAnalytics Marketing Detail&lt;br&gt;Valid Values:&lt;br&gt;Business Description: Contains the associated analytics marketing elements associated with the involved party.&lt;br&gt;Comments:&lt;/p&gt;</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="IpKey" type="xsd_2:IpKey">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Business Name: Involved Party Key&lt;br&gt;Valid Values:&lt;br&gt;Business Description: Contains involved party identifier along with the SOR details of the involved party.&lt;br&gt;Comments:&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="IpPrmryNme" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Business Name: Involved Party Primary Name.&lt;br&gt;Valid Values:&lt;br&gt;Business Description: Contains the primary name of the involved party.&lt;br&gt;Comments:&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="PrmyCustInd" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Business Name: Primary Customer Indicator&lt;br&gt;Valid Values:true, false&lt;br&gt;Business Description:Indicates if the involved party is a primary customer.&lt;br&gt;Comments:&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="AnlytcsMktDtl" type="xsd_3:AnalyticsMarketingDetail">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Business Name:AnalyticsMarketingDetail&lt;br&gt;Valid Values:&lt;br&gt;Business Description: Contains the analytics marketing details of an Involved Party.&lt;br&gt;Comments:&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema elementFormDefault="qualified" targetNamespace="Communication" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsd_1="Communication" xmlns:xsd_2="ResourceItem">
+  <xsd:import namespace="ResourceItem" schemaLocation="ResourceItem_v1_12.xsd"/>
+  <xsd:annotation>
+    <xsd:documentation>Contains communication objects. Example: SalesItem, WorkFlowInstance.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexType name="AnalyticsMarketingDetail">
+    <xsd:annotation>
+      <xsd:documentation>&lt;p&gt;Business Name:AnalyticsMarketingDetail&lt;br&gt;Valid Values:&lt;br&gt;Business Description: Contains the analytics marketing details of an Involved Party.&lt;br&gt;Comments:&lt;/p&gt;</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="Ucic" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Business Name: Universal Customer Identification Code&lt;br&gt;Valid Values:&lt;br&gt;Business Description:This is an unique identifier for an involved party which is used for marketing analytics.&lt;br&gt;Comments:&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="MktSlctPrefInd" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Business Name:Marketing Solicitation Preference Indicator&lt;br&gt;Valid Values:&lt;br&gt;true&lt;br&gt;false&lt;br&gt;Business Description: Identifies whether the involved party has opted out of online solicitations.&lt;br&gt;Comments: Note that true indicates the involved party has not opted out (online solicitations are allowed) and false indicates the involved party has opted out (online solicitations are not allowed).&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="AnalyticsMarketingOffer">
+    <xsd:annotation>
+      <xsd:documentation>&lt;p&gt;Business Name: Analytics Marketing Offer&lt;br&gt;Valid Values:&lt;br&gt;Business Description:Contains the analytics marketing offers for an Involved Party based on analytics engine.&lt;br&gt;Comments:&lt;/p&gt;</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="OfrId" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Business Name:Offers Identifier&lt;br&gt;Valid Values:&lt;br&gt;Business Description: Unique ID of the offer.&lt;br&gt;Comments:&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="OfrTyp" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Business Name:Offer Type&lt;br&gt;Valid Values: Product,Service,Promotion&lt;br&gt;Business Description:Category/Type of the Offer, Applicable to text media only&lt;br&gt;Comments:&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="Nme" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p &gt;Business Name: Name&lt;/p&gt;&lt;p &gt;Valid Values:&lt;/p&gt;&lt;p &gt;Business Description: The name of the campaign.&lt;/p&gt;&lt;p &gt;Comments:&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="ImgMedia" type="xsd_2:ImageMedia">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p &gt;Business Name: Image Media&lt;/p&gt;&lt;p &gt;Valid Values:&lt;/p&gt;&lt;p &gt;Business Description: Contains attributes associated to an Image based media.&lt;/p&gt;&lt;p &gt;Comments:&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="TxtMedia" type="xsd_2:TextMedia">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p &gt;Business Name: Text Media&lt;/p&gt;&lt;p &gt;Valid Values:&lt;/p&gt;&lt;p &gt;Business Description: Contains attributes associated to a Text based media.&lt;/p&gt;&lt;p &gt;Comments:&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="ProdId" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p &gt;Business Name: Product ID&lt;/p&gt;&lt;p &gt;Valid Values:&lt;/p&gt;&lt;p &gt;Business Description: Product ID from associated system.&lt;/p&gt;&lt;p &gt;Comments:&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>
