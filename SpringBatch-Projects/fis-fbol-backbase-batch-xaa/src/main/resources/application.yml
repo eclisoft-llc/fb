@@ -1,0 +1,30 @@
+server.port: 9085
+
+spring:
+  profiles:
+    active: "dev"
+  main:
+    banner-mode: "off"
+  jpa:
+    properties.hibernate.format_sql: true
+    database: sql_server
+    hibernate:
+      ddl-auto: none
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: ${SQL_URL}
+    username: ${SQL_USER}
+    password: ${SQL_PASSWORD}
+  batch:
+    jdbc:
+      initialize-schema: "always"
+    job:
+      enabled: false
+  autoconfigure:
+    exclude: "org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration"
+
+azure:
+  storage_connection_string: ${AZURE_STORAGE_CONN_STRING:}
+code_connect:
+  url: ${CODE_CONNECT_CONN_STRING:}
+cron: "0 0 6 15 * *"
