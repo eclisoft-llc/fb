@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema elementFormDefault="qualified" targetNamespace="InvolvedParty" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsd_1="InvolvedParty" xmlns:xsd_2="Common">
+  <xsd:import namespace="Common" schemaLocation="Common_v1_12.xsd"/>
+  <xsd:annotation>
+    <xsd:documentation>People or organizations that are in any way involved with the business.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexType name="IpIdentifier">
+    <xsd:sequence>
+      <xsd:element name="IpId" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Involved Party Identifier
+Valid Values: 
+Business Description: Unique identifier used to identify the involved party (IP) within the system of record (SOR).
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="IpKey">
+    <xsd:complexContent>
+      <xsd:extension base="xsd_1:IpIdentifier">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Sor" type="xsd_2:Sor">
+            <xsd:annotation>
+              <xsd:documentation>Business Name: System of Record  
+Valid Values: 
+Business Description: Contains components used to define the System of Record (SOR).
+Comments:</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

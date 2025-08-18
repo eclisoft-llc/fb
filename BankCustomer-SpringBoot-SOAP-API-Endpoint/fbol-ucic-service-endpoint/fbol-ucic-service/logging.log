@@ -1,0 +1,764 @@
+2022-05-11 12:39:24.555  INFO 11136 --- [main] c.f.u.s.FbolUcicServiceApplication       : Starting FbolUcicServiceApplication using Java 11 on PC0199-40435 with PID 11136 (C:\Users\okekenf01\source\repos\fbol-ucic-service\target\classes started by okekenf01 in C:\Users\okekenf01\source\repos\fbol-ucic-service)
+2022-05-11 12:39:24.589  INFO 11136 --- [main] c.f.u.s.FbolUcicServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2022-05-11 12:39:25.314  INFO 11136 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$2a8e2781] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-11 12:39:25.365  INFO 11136 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-05-11 12:39:26.246  INFO 11136 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-11 12:39:26.255  INFO 11136 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-11 12:39:26.256  INFO 11136 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-05-11 12:39:26.517  INFO 11136 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-11 12:39:26.518  INFO 11136 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1872 ms
+2022-05-11 12:39:26.825 DEBUG 11136 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-05-11 12:39:26.898 DEBUG 11136 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-05-11 12:39:26.922 DEBUG 11136 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-05-11 12:39:26.930 DEBUG 11136 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-05-11 12:39:27.025  INFO 11136 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-11 12:39:27.034  INFO 11136 --- [main] c.f.u.s.FbolUcicServiceApplication       : Started FbolUcicServiceApplication in 3.055 seconds (JVM running for 3.719)
+2022-05-11 12:40:31.870  INFO 11136 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-11 12:40:31.872  INFO 11136 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-11 12:40:31.873 DEBUG 11136 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2022-05-11 12:40:31.873 DEBUG 11136 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2022-05-11 12:40:31.874 DEBUG 11136 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2022-05-11 12:40:31.875 DEBUG 11136 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@69af0759
+2022-05-11 12:40:31.875 DEBUG 11136 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@2a30e878
+2022-05-11 12:40:31.876 DEBUG 11136 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='true': request parameters and headers will be shown which may lead to unsafe logging of potentially sensitive data
+2022-05-11 12:40:31.876  INFO 11136 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-05-11 12:40:31.884 DEBUG 11136 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/ucic/367268", parameters={}
+2022-05-11 12:40:31.894 DEBUG 11136 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2022-05-11 12:40:31.897 DEBUG 11136 --- [http-nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2022-05-11 12:40:31.898 DEBUG 11136 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2022-05-11 12:40:31.905 DEBUG 11136 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2022-05-11 12:40:31.908 DEBUG 11136 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2022-05-11 12:40:31.935 DEBUG 11136 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-05-11 12:40:31.936 DEBUG 11136 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Wed May 11 12:40:31 CDT 2022, status=404, error=Not Found, path=/ucic/367268}]
+2022-05-11 12:40:31.978 DEBUG 11136 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2022-05-11 12:41:08.266 DEBUG 11136 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/getucic/367268", parameters={}
+2022-05-11 12:41:08.267 DEBUG 11136 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.fbol.ucic.service.controller.UcicController#getUcic(String)
+2022-05-11 12:41:08.324  INFO 11136 --- [http-nio-8080-exec-3] o.s.ws.soap.saaj.SaajSoapMessageFactory  : Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2022-05-11 12:41:08.342  INFO 11136 --- [http-nio-8080-exec-3] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: ddf33eb4-ee51-4d3e-b5b6-2606a8eeb3fc; CIS Number: 367268 setting request headers....
+2022-05-11 12:41:08.349  INFO 11136 --- [http-nio-8080-exec-3] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: ddf33eb4-ee51-4d3e-b5b6-2606a8eeb3fc; CIS Number: 367268 Request headers are set....
+2022-05-11 12:41:08.350  INFO 11136 --- [http-nio-8080-exec-3] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: ddf33eb4-ee51-4d3e-b5b6-2606a8eeb3fc; CIS Number: 367268 Creating request body....
+2022-05-11 12:41:08.351  INFO 11136 --- [http-nio-8080-exec-3] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: ddf33eb4-ee51-4d3e-b5b6-2606a8eeb3fc; CIS Number: 367268 Creating request key....
+2022-05-11 12:41:08.353  INFO 11136 --- [http-nio-8080-exec-3] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: ddf33eb4-ee51-4d3e-b5b6-2606a8eeb3fc; CIS Number: 367268 Created request key....
+2022-05-11 12:41:08.353  INFO 11136 --- [http-nio-8080-exec-3] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: ddf33eb4-ee51-4d3e-b5b6-2606a8eeb3fc; CIS Number: 367268 Creating IpArkey using CIS number....
+2022-05-11 12:41:08.357  INFO 11136 --- [http-nio-8080-exec-3] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: ddf33eb4-ee51-4d3e-b5b6-2606a8eeb3fc; CIS Number: 367268 Created IpArkey using CIS number....
+2022-05-11 12:41:08.357  INFO 11136 --- [http-nio-8080-exec-3] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: ddf33eb4-ee51-4d3e-b5b6-2606a8eeb3fc; CIS Number: 367268 Configuring list control....
+2022-05-11 12:41:08.358  INFO 11136 --- [http-nio-8080-exec-3] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: ddf33eb4-ee51-4d3e-b5b6-2606a8eeb3fc; CIS Number: 367268 List control configured....
+2022-05-11 12:41:08.359  INFO 11136 --- [http-nio-8080-exec-3] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: ddf33eb4-ee51-4d3e-b5b6-2606a8eeb3fc; CIS Number: 367268 Created request body....
+2022-05-11 12:41:08.359  INFO 11136 --- [http-nio-8080-exec-3] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: ddf33eb4-ee51-4d3e-b5b6-2606a8eeb3fc; CIS Number: 367268 Calling SOAP endpoint....
+2022-05-11 12:41:08.812 ERROR 11136 --- [http-nio-8080-exec-3] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: ddf33eb4-ee51-4d3e-b5b6-2606a8eeb3fc; CIS Number: 367268 ; Exception occurred: null At: java.net.MalformedURLException
+	at java.base/java.net.URL.<init>(URL.java:661)
+	at java.base/java.net.URL.<init>(URL.java:523)
+	at java.base/java.net.URL.<init>(URL.java:470)
+	at com.fbol.ucic.service.wsdl.client.EndPoint.callSoapendpoint(EndPoint.java:47)
+	at com.fbol.ucic.service.wsdl.client.UcicClient.getUcic(UcicClient.java:187)
+	at com.fbol.ucic.service.controller.UcicController.getUcic(UcicController.java:30)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+	at java.base/java.net.URL.<init>(URL.java:567)
+	... 55 more
+
+2022-05-11 12:41:08.824 DEBUG 11136 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-05-11 12:41:08.825 DEBUG 11136 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2022-05-11 12:41:08.825 DEBUG 11136 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2022-05-11 12:44:19.707  INFO 6880 --- [main] c.f.u.s.FbolUcicServiceApplication       : Starting FbolUcicServiceApplication using Java 11 on PC0199-40435 with PID 6880 (C:\Users\okekenf01\source\repos\fbol-ucic-service\target\classes started by okekenf01 in C:\Users\okekenf01\source\repos\fbol-ucic-service)
+2022-05-11 12:44:19.722  INFO 6880 --- [main] c.f.u.s.FbolUcicServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2022-05-11 12:44:20.450  INFO 6880 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$115e3712] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-11 12:44:20.504  INFO 6880 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-05-11 12:44:21.413  INFO 6880 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-11 12:44:21.423  INFO 6880 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-11 12:44:21.424  INFO 6880 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-05-11 12:44:21.693  INFO 6880 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-11 12:44:21.694  INFO 6880 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1916 ms
+2022-05-11 12:44:22.037 DEBUG 6880 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-05-11 12:44:22.101 DEBUG 6880 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-05-11 12:44:22.128 DEBUG 6880 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-05-11 12:44:22.135 DEBUG 6880 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-05-11 12:44:22.226  INFO 6880 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-11 12:44:22.240  INFO 6880 --- [main] c.f.u.s.FbolUcicServiceApplication       : Started FbolUcicServiceApplication in 3.153 seconds (JVM running for 3.859)
+2022-05-11 12:44:30.217  INFO 6880 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-11 12:44:30.219  INFO 6880 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-11 12:44:30.219 DEBUG 6880 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2022-05-11 12:44:30.220 DEBUG 6880 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2022-05-11 12:44:30.220 DEBUG 6880 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2022-05-11 12:44:30.224 DEBUG 6880 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@47dea13e
+2022-05-11 12:44:30.224 DEBUG 6880 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@28848438
+2022-05-11 12:44:30.225 DEBUG 6880 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='true': request parameters and headers will be shown which may lead to unsafe logging of potentially sensitive data
+2022-05-11 12:44:30.226  INFO 6880 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2022-05-11 12:44:30.236 DEBUG 6880 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/getucic/367268", parameters={}
+2022-05-11 12:44:30.243 DEBUG 6880 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.fbol.ucic.service.controller.UcicController#getUcic(String)
+2022-05-11 12:44:30.301  INFO 6880 --- [http-nio-8080-exec-1] o.s.ws.soap.saaj.SaajSoapMessageFactory  : Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2022-05-11 12:44:30.318  INFO 6880 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: e46bcb87-6d4c-4da4-a5e2-1acd8ea1e0ae; CIS Number: 367268 setting request headers....
+2022-05-11 12:44:30.323  INFO 6880 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: e46bcb87-6d4c-4da4-a5e2-1acd8ea1e0ae; CIS Number: 367268 Request headers are set....
+2022-05-11 12:44:30.323  INFO 6880 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: e46bcb87-6d4c-4da4-a5e2-1acd8ea1e0ae; CIS Number: 367268 Creating request body....
+2022-05-11 12:44:30.324  INFO 6880 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: e46bcb87-6d4c-4da4-a5e2-1acd8ea1e0ae; CIS Number: 367268 Creating request key....
+2022-05-11 12:44:30.326  INFO 6880 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: e46bcb87-6d4c-4da4-a5e2-1acd8ea1e0ae; CIS Number: 367268 Created request key....
+2022-05-11 12:44:30.327  INFO 6880 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: e46bcb87-6d4c-4da4-a5e2-1acd8ea1e0ae; CIS Number: 367268 Creating IpArkey using CIS number....
+2022-05-11 12:44:30.330  INFO 6880 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: e46bcb87-6d4c-4da4-a5e2-1acd8ea1e0ae; CIS Number: 367268 Created IpArkey using CIS number....
+2022-05-11 12:44:30.331  INFO 6880 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: e46bcb87-6d4c-4da4-a5e2-1acd8ea1e0ae; CIS Number: 367268 Configuring list control....
+2022-05-11 12:44:30.332  INFO 6880 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: e46bcb87-6d4c-4da4-a5e2-1acd8ea1e0ae; CIS Number: 367268 List control configured....
+2022-05-11 12:44:30.332  INFO 6880 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: e46bcb87-6d4c-4da4-a5e2-1acd8ea1e0ae; CIS Number: 367268 Created request body....
+2022-05-11 12:44:30.333  INFO 6880 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: e46bcb87-6d4c-4da4-a5e2-1acd8ea1e0ae; CIS Number: 367268 Calling SOAP endpoint....
+2022-05-11 12:44:30.748 ERROR 6880 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: e46bcb87-6d4c-4da4-a5e2-1acd8ea1e0ae; CIS Number: 367268 ; Exception occurred: null At: java.net.MalformedURLException
+	at java.base/java.net.URL.<init>(URL.java:661)
+	at java.base/java.net.URL.<init>(URL.java:523)
+	at java.base/java.net.URL.<init>(URL.java:470)
+	at com.fbol.ucic.service.wsdl.client.EndPoint.callSoapendpoint(EndPoint.java:48)
+	at com.fbol.ucic.service.wsdl.client.UcicClient.getUcic(UcicClient.java:187)
+	at com.fbol.ucic.service.controller.UcicController.getUcic(UcicController.java:30)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+	at java.base/java.net.URL.<init>(URL.java:567)
+	... 55 more
+
+2022-05-11 12:44:30.786 DEBUG 6880 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-05-11 12:44:30.786 DEBUG 6880 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2022-05-11 12:44:30.789 DEBUG 6880 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2022-05-11 12:46:41.001  INFO 17172 --- [main] c.f.u.s.FbolUcicServiceApplication       : Starting FbolUcicServiceApplication using Java 11 on PC0199-40435 with PID 17172 (C:\Users\okekenf01\source\repos\fbol-ucic-service\target\classes started by okekenf01 in C:\Users\okekenf01\source\repos\fbol-ucic-service)
+2022-05-11 12:46:41.017  INFO 17172 --- [main] c.f.u.s.FbolUcicServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2022-05-11 12:46:41.844  INFO 17172 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$115e3712] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-11 12:46:41.906  INFO 17172 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-05-11 12:46:42.877  INFO 17172 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-11 12:46:42.888  INFO 17172 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-11 12:46:42.889  INFO 17172 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-05-11 12:46:43.171  INFO 17172 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-11 12:46:43.171  INFO 17172 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2099 ms
+2022-05-11 12:46:43.536 DEBUG 17172 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-05-11 12:46:43.593 DEBUG 17172 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-05-11 12:46:43.643 DEBUG 17172 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-05-11 12:46:43.651 DEBUG 17172 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-05-11 12:46:43.751  INFO 17172 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-11 12:46:43.762  INFO 17172 --- [main] c.f.u.s.FbolUcicServiceApplication       : Started FbolUcicServiceApplication in 3.447 seconds (JVM running for 4.313)
+2022-05-11 12:46:53.885  INFO 17172 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-11 12:46:53.887  INFO 17172 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-11 12:46:53.888 DEBUG 17172 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2022-05-11 12:46:53.888 DEBUG 17172 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2022-05-11 12:46:53.888 DEBUG 17172 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2022-05-11 12:46:53.889 DEBUG 17172 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@282f794b
+2022-05-11 12:46:53.890 DEBUG 17172 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@ffeb457
+2022-05-11 12:46:53.890 DEBUG 17172 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='true': request parameters and headers will be shown which may lead to unsafe logging of potentially sensitive data
+2022-05-11 12:46:53.891  INFO 17172 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-05-11 12:46:53.900 DEBUG 17172 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/getucic/367268", parameters={}
+2022-05-11 12:46:53.907 DEBUG 17172 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.fbol.ucic.service.controller.UcicController#getUcic(String)
+2022-05-11 12:46:53.969  INFO 17172 --- [http-nio-8080-exec-1] o.s.ws.soap.saaj.SaajSoapMessageFactory  : Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2022-05-11 12:46:53.989  INFO 17172 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: ec5f7966-2836-4c93-935c-676ceb5d47b7; CIS Number: 367268 setting request headers....
+2022-05-11 12:46:53.993  INFO 17172 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: ec5f7966-2836-4c93-935c-676ceb5d47b7; CIS Number: 367268 Request headers are set....
+2022-05-11 12:46:53.994  INFO 17172 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: ec5f7966-2836-4c93-935c-676ceb5d47b7; CIS Number: 367268 Creating request body....
+2022-05-11 12:46:53.995  INFO 17172 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: ec5f7966-2836-4c93-935c-676ceb5d47b7; CIS Number: 367268 Creating request key....
+2022-05-11 12:46:53.997  INFO 17172 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: ec5f7966-2836-4c93-935c-676ceb5d47b7; CIS Number: 367268 Created request key....
+2022-05-11 12:46:53.998  INFO 17172 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: ec5f7966-2836-4c93-935c-676ceb5d47b7; CIS Number: 367268 Creating IpArkey using CIS number....
+2022-05-11 12:46:54.002  INFO 17172 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: ec5f7966-2836-4c93-935c-676ceb5d47b7; CIS Number: 367268 Created IpArkey using CIS number....
+2022-05-11 12:46:54.002  INFO 17172 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: ec5f7966-2836-4c93-935c-676ceb5d47b7; CIS Number: 367268 Configuring list control....
+2022-05-11 12:46:54.004  INFO 17172 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: ec5f7966-2836-4c93-935c-676ceb5d47b7; CIS Number: 367268 List control configured....
+2022-05-11 12:46:54.004  INFO 17172 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: ec5f7966-2836-4c93-935c-676ceb5d47b7; CIS Number: 367268 Created request body....
+2022-05-11 12:46:54.005  INFO 17172 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: ec5f7966-2836-4c93-935c-676ceb5d47b7; CIS Number: 367268 Calling SOAP endpoint....
+2022-05-11 12:46:54.428 ERROR 17172 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: ec5f7966-2836-4c93-935c-676ceb5d47b7; CIS Number: 367268 ; Exception occurred: null At: java.net.MalformedURLException
+	at java.base/java.net.URL.<init>(URL.java:661)
+	at java.base/java.net.URL.<init>(URL.java:523)
+	at java.base/java.net.URL.<init>(URL.java:470)
+	at com.fbol.ucic.service.wsdl.client.EndPoint.callSoapendpoint(EndPoint.java:48)
+	at com.fbol.ucic.service.wsdl.client.UcicClient.getUcic(UcicClient.java:187)
+	at com.fbol.ucic.service.controller.UcicController.getUcic(UcicController.java:30)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+	at java.base/java.net.URL.<init>(URL.java:567)
+	... 55 more
+
+2022-05-11 12:46:54.472 DEBUG 17172 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-05-11 12:46:54.473 DEBUG 17172 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2022-05-11 12:46:54.476 DEBUG 17172 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2022-05-11 12:49:48.627  INFO 18852 --- [main] c.f.u.s.FbolUcicServiceApplication       : Starting FbolUcicServiceApplication using Java 11 on PC0199-40435 with PID 18852 (C:\Users\okekenf01\source\repos\fbol-ucic-service\target\classes started by okekenf01 in C:\Users\okekenf01\source\repos\fbol-ucic-service)
+2022-05-11 12:49:48.642  INFO 18852 --- [main] c.f.u.s.FbolUcicServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2022-05-11 12:49:49.374  INFO 18852 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$115e3712] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-11 12:49:49.421  INFO 18852 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-05-11 12:49:50.296  INFO 18852 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-11 12:49:50.306  INFO 18852 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-11 12:49:50.307  INFO 18852 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-05-11 12:49:50.563  INFO 18852 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-11 12:49:50.563  INFO 18852 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1874 ms
+2022-05-11 12:49:50.885 DEBUG 18852 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-05-11 12:49:50.952 DEBUG 18852 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-05-11 12:49:50.975 DEBUG 18852 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-05-11 12:49:50.982 DEBUG 18852 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-05-11 12:49:51.074  INFO 18852 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-11 12:49:51.086  INFO 18852 --- [main] c.f.u.s.FbolUcicServiceApplication       : Started FbolUcicServiceApplication in 3.059 seconds (JVM running for 3.746)
+2022-05-11 12:50:00.279  INFO 18852 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-11 12:50:00.281  INFO 18852 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-11 12:50:00.282 DEBUG 18852 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2022-05-11 12:50:00.282 DEBUG 18852 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2022-05-11 12:50:00.283 DEBUG 18852 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2022-05-11 12:50:00.284 DEBUG 18852 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@55e6be80
+2022-05-11 12:50:00.285 DEBUG 18852 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@5cb68224
+2022-05-11 12:50:00.285 DEBUG 18852 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='true': request parameters and headers will be shown which may lead to unsafe logging of potentially sensitive data
+2022-05-11 12:50:00.286  INFO 18852 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2022-05-11 12:50:00.294 DEBUG 18852 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/getucic/367268", parameters={}
+2022-05-11 12:50:00.303 DEBUG 18852 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.fbol.ucic.service.controller.UcicController#getUcic(String)
+2022-05-11 12:50:00.361  INFO 18852 --- [http-nio-8080-exec-1] o.s.ws.soap.saaj.SaajSoapMessageFactory  : Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2022-05-11 12:50:00.379  INFO 18852 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 67550b5d-8d4f-44c2-a5e1-74fcbc6af4e6; CIS Number: 367268 setting request headers....
+2022-05-11 12:50:00.385  INFO 18852 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 67550b5d-8d4f-44c2-a5e1-74fcbc6af4e6; CIS Number: 367268 Request headers are set....
+2022-05-11 12:50:00.386  INFO 18852 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 67550b5d-8d4f-44c2-a5e1-74fcbc6af4e6; CIS Number: 367268 Creating request body....
+2022-05-11 12:50:00.388  INFO 18852 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 67550b5d-8d4f-44c2-a5e1-74fcbc6af4e6; CIS Number: 367268 Creating request key....
+2022-05-11 12:50:00.390  INFO 18852 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 67550b5d-8d4f-44c2-a5e1-74fcbc6af4e6; CIS Number: 367268 Created request key....
+2022-05-11 12:50:00.391  INFO 18852 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 67550b5d-8d4f-44c2-a5e1-74fcbc6af4e6; CIS Number: 367268 Creating IpArkey using CIS number....
+2022-05-11 12:50:00.394  INFO 18852 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 67550b5d-8d4f-44c2-a5e1-74fcbc6af4e6; CIS Number: 367268 Created IpArkey using CIS number....
+2022-05-11 12:50:00.394  INFO 18852 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 67550b5d-8d4f-44c2-a5e1-74fcbc6af4e6; CIS Number: 367268 Configuring list control....
+2022-05-11 12:50:00.396  INFO 18852 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 67550b5d-8d4f-44c2-a5e1-74fcbc6af4e6; CIS Number: 367268 List control configured....
+2022-05-11 12:50:00.396  INFO 18852 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 67550b5d-8d4f-44c2-a5e1-74fcbc6af4e6; CIS Number: 367268 Created request body....
+2022-05-11 12:50:00.397  INFO 18852 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 67550b5d-8d4f-44c2-a5e1-74fcbc6af4e6; CIS Number: 367268 Calling SOAP endpoint....
+2022-05-11 12:50:00.823 ERROR 18852 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 67550b5d-8d4f-44c2-a5e1-74fcbc6af4e6; CIS Number: 367268 ; Exception occurred: null At: java.net.MalformedURLException
+	at java.base/java.net.URL.<init>(URL.java:661)
+	at java.base/java.net.URL.<init>(URL.java:523)
+	at java.base/java.net.URL.<init>(URL.java:470)
+	at com.fbol.ucic.service.wsdl.client.EndPoint.callSoapendpoint(EndPoint.java:48)
+	at com.fbol.ucic.service.wsdl.client.UcicClient.getUcic(UcicClient.java:187)
+	at com.fbol.ucic.service.controller.UcicController.getUcic(UcicController.java:30)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+	at java.base/java.net.URL.<init>(URL.java:567)
+	... 55 more
+
+2022-05-11 12:50:00.865 DEBUG 18852 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-05-11 12:50:00.866 DEBUG 18852 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2022-05-11 12:50:00.869 DEBUG 18852 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2022-05-11 12:52:44.782  INFO 18464 --- [main] c.f.u.s.FbolUcicServiceApplication       : Starting FbolUcicServiceApplication using Java 11 on PC0199-40435 with PID 18464 (C:\Users\okekenf01\source\repos\fbol-ucic-service\target\classes started by okekenf01 in C:\Users\okekenf01\source\repos\fbol-ucic-service)
+2022-05-11 12:52:44.796  INFO 18464 --- [main] c.f.u.s.FbolUcicServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2022-05-11 12:52:45.546  INFO 18464 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$5ece84fe] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-11 12:52:45.594  INFO 18464 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-05-11 12:52:46.491  INFO 18464 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-11 12:52:46.503  INFO 18464 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-11 12:52:46.504  INFO 18464 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-05-11 12:52:46.772  INFO 18464 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-11 12:52:46.773  INFO 18464 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1925 ms
+2022-05-11 12:52:47.010  INFO 18464 --- [main] o.s.ws.soap.saaj.SaajSoapMessageFactory  : Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2022-05-11 12:52:47.195 DEBUG 18464 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-05-11 12:52:47.291 DEBUG 18464 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-05-11 12:52:47.321 DEBUG 18464 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-05-11 12:52:47.328 DEBUG 18464 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-05-11 12:52:47.463  INFO 18464 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-11 12:52:47.480  INFO 18464 --- [main] c.f.u.s.FbolUcicServiceApplication       : Started FbolUcicServiceApplication in 3.321 seconds (JVM running for 4.03)
+2022-05-11 12:52:58.541  INFO 18464 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-11 12:52:58.544  INFO 18464 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-11 12:52:58.545 DEBUG 18464 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2022-05-11 12:52:58.545 DEBUG 18464 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2022-05-11 12:52:58.546 DEBUG 18464 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2022-05-11 12:52:58.547 DEBUG 18464 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@406df7c9
+2022-05-11 12:52:58.548 DEBUG 18464 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@5e1cc2c5
+2022-05-11 12:52:58.548 DEBUG 18464 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='true': request parameters and headers will be shown which may lead to unsafe logging of potentially sensitive data
+2022-05-11 12:52:58.550  INFO 18464 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2022-05-11 12:52:58.559 DEBUG 18464 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/getucic/367268", parameters={}
+2022-05-11 12:52:58.566 DEBUG 18464 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.fbol.ucic.service.controller.UcicController#getUcic(String)
+2022-05-11 12:52:58.582  INFO 18464 --- [http-nio-8080-exec-1] o.s.ws.soap.saaj.SaajSoapMessageFactory  : Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2022-05-11 12:52:58.593  INFO 18464 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 562f163f-de02-4310-a2a6-d4ad47bc37ce; CIS Number: 367268 setting request headers....
+2022-05-11 12:52:58.599  INFO 18464 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 562f163f-de02-4310-a2a6-d4ad47bc37ce; CIS Number: 367268 Request headers are set....
+2022-05-11 12:52:58.599  INFO 18464 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 562f163f-de02-4310-a2a6-d4ad47bc37ce; CIS Number: 367268 Creating request body....
+2022-05-11 12:52:58.601  INFO 18464 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 562f163f-de02-4310-a2a6-d4ad47bc37ce; CIS Number: 367268 Creating request key....
+2022-05-11 12:52:58.603  INFO 18464 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 562f163f-de02-4310-a2a6-d4ad47bc37ce; CIS Number: 367268 Created request key....
+2022-05-11 12:52:58.603  INFO 18464 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 562f163f-de02-4310-a2a6-d4ad47bc37ce; CIS Number: 367268 Creating IpArkey using CIS number....
+2022-05-11 12:52:58.606  INFO 18464 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 562f163f-de02-4310-a2a6-d4ad47bc37ce; CIS Number: 367268 Created IpArkey using CIS number....
+2022-05-11 12:52:58.607  INFO 18464 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 562f163f-de02-4310-a2a6-d4ad47bc37ce; CIS Number: 367268 Configuring list control....
+2022-05-11 12:52:58.609  INFO 18464 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 562f163f-de02-4310-a2a6-d4ad47bc37ce; CIS Number: 367268 List control configured....
+2022-05-11 12:52:58.612  INFO 18464 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 562f163f-de02-4310-a2a6-d4ad47bc37ce; CIS Number: 367268 Created request body....
+2022-05-11 12:52:58.612  INFO 18464 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 562f163f-de02-4310-a2a6-d4ad47bc37ce; CIS Number: 367268 Calling SOAP endpoint....
+2022-05-11 12:52:59.030 ERROR 18464 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 562f163f-de02-4310-a2a6-d4ad47bc37ce; CIS Number: 367268 ; Exception occurred: null At: java.net.MalformedURLException
+	at java.base/java.net.URL.<init>(URL.java:661)
+	at java.base/java.net.URL.<init>(URL.java:523)
+	at java.base/java.net.URL.<init>(URL.java:470)
+	at com.fbol.ucic.service.wsdl.client.EndPoint.callSoapendpoint(EndPoint.java:48)
+	at com.fbol.ucic.service.wsdl.client.UcicClient.getUcic(UcicClient.java:187)
+	at com.fbol.ucic.service.controller.UcicController.getUcic(UcicController.java:30)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException
+	at java.base/java.net.URL.<init>(URL.java:567)
+	... 55 more
+
+2022-05-11 12:52:59.075 DEBUG 18464 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-05-11 12:52:59.076 DEBUG 18464 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2022-05-11 12:52:59.079 DEBUG 18464 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2022-05-11 12:55:23.860  INFO 15744 --- [main] c.f.u.s.FbolUcicServiceApplication       : Starting FbolUcicServiceApplication using Java 11 on PC0199-40435 with PID 15744 (C:\Users\okekenf01\source\repos\fbol-ucic-service\target\classes started by okekenf01 in C:\Users\okekenf01\source\repos\fbol-ucic-service)
+2022-05-11 12:55:23.876  INFO 15744 --- [main] c.f.u.s.FbolUcicServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2022-05-11 12:55:24.613  INFO 15744 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$87b853c6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-11 12:55:24.664  INFO 15744 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-05-11 12:55:25.543  INFO 15744 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-11 12:55:25.553  INFO 15744 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-11 12:55:25.554  INFO 15744 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-05-11 12:55:25.828  INFO 15744 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-11 12:55:25.829  INFO 15744 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1898 ms
+2022-05-11 12:55:25.912  INFO 15744 --- [main] o.s.ws.soap.saaj.SaajSoapMessageFactory  : Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2022-05-11 12:55:26.194 DEBUG 15744 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-05-11 12:55:26.267 DEBUG 15744 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-05-11 12:55:26.291 DEBUG 15744 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-05-11 12:55:26.299 DEBUG 15744 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-05-11 12:55:26.396  INFO 15744 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-11 12:55:26.405  INFO 15744 --- [main] c.f.u.s.FbolUcicServiceApplication       : Started FbolUcicServiceApplication in 3.181 seconds (JVM running for 3.875)
+2022-05-11 12:55:33.975  INFO 15744 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-11 12:55:33.976  INFO 15744 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-11 12:55:33.977 DEBUG 15744 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2022-05-11 12:55:33.977 DEBUG 15744 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2022-05-11 12:55:33.978 DEBUG 15744 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2022-05-11 12:55:33.979 DEBUG 15744 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@32876020
+2022-05-11 12:55:33.980 DEBUG 15744 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@71a25eb5
+2022-05-11 12:55:33.980 DEBUG 15744 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='true': request parameters and headers will be shown which may lead to unsafe logging of potentially sensitive data
+2022-05-11 12:55:33.981  INFO 15744 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2022-05-11 12:55:33.989 DEBUG 15744 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/getucic/367268", parameters={}
+2022-05-11 12:55:33.996 DEBUG 15744 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.fbol.ucic.service.controller.UcicController#getUcic(String)
+2022-05-11 12:55:34.019  INFO 15744 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: c505caad-6203-4612-a20e-6ff1b6629300; CIS Number: 367268 setting request headers....
+2022-05-11 12:55:34.024  INFO 15744 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: c505caad-6203-4612-a20e-6ff1b6629300; CIS Number: 367268 Request headers are set....
+2022-05-11 12:55:34.024  INFO 15744 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: c505caad-6203-4612-a20e-6ff1b6629300; CIS Number: 367268 Creating request body....
+2022-05-11 12:55:34.025  INFO 15744 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: c505caad-6203-4612-a20e-6ff1b6629300; CIS Number: 367268 Creating request key....
+2022-05-11 12:55:34.027  INFO 15744 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: c505caad-6203-4612-a20e-6ff1b6629300; CIS Number: 367268 Created request key....
+2022-05-11 12:55:34.028  INFO 15744 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: c505caad-6203-4612-a20e-6ff1b6629300; CIS Number: 367268 Creating IpArkey using CIS number....
+2022-05-11 12:55:34.031  INFO 15744 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: c505caad-6203-4612-a20e-6ff1b6629300; CIS Number: 367268 Created IpArkey using CIS number....
+2022-05-11 12:55:34.032  INFO 15744 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: c505caad-6203-4612-a20e-6ff1b6629300; CIS Number: 367268 Configuring list control....
+2022-05-11 12:55:34.033  INFO 15744 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: c505caad-6203-4612-a20e-6ff1b6629300; CIS Number: 367268 List control configured....
+2022-05-11 12:55:34.034  INFO 15744 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: c505caad-6203-4612-a20e-6ff1b6629300; CIS Number: 367268 Created request body....
+2022-05-11 12:55:34.034  INFO 15744 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: c505caad-6203-4612-a20e-6ff1b6629300; CIS Number: 367268 Calling SOAP endpoint....
+2022-05-11 12:55:35.120 ERROR 15744 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: c505caad-6203-4612-a20e-6ff1b6629300; CIS Number: 367268 ; Exception occurred: null At: javax.xml.bind.UnmarshalException
+ - with linked exception:
+[org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Content is not allowed in prolog.]
+	at javax.xml.bind.helpers.AbstractUnmarshallerImpl.createUnmarshalException(AbstractUnmarshallerImpl.java:340)
+	at com.sun.xml.bind.v2.runtime.unmarshaller.UnmarshallerImpl.createUnmarshalException(UnmarshallerImpl.java:578)
+	at com.sun.xml.bind.v2.runtime.unmarshaller.UnmarshallerImpl.unmarshal0(UnmarshallerImpl.java:264)
+	at com.sun.xml.bind.v2.runtime.unmarshaller.UnmarshallerImpl.unmarshal(UnmarshallerImpl.java:229)
+	at javax.xml.bind.helpers.AbstractUnmarshallerImpl.unmarshal(AbstractUnmarshallerImpl.java:170)
+	at javax.xml.bind.helpers.AbstractUnmarshallerImpl.unmarshal(AbstractUnmarshallerImpl.java:219)
+	at com.fbol.ucic.service.wsdl.client.EndPoint.callSoapendpoint(EndPoint.java:55)
+	at com.fbol.ucic.service.wsdl.client.UcicClient.getUcic(UcicClient.java:187)
+	at com.fbol.ucic.service.controller.UcicController.getUcic(UcicController.java:30)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Content is not allowed in prolog.
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1471)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:978)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:112)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:534)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:888)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1216)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:635)
+	at com.sun.xml.bind.v2.runtime.unmarshaller.UnmarshallerImpl.unmarshal0(UnmarshallerImpl.java:258)
+	... 56 more
+
+2022-05-11 12:55:35.167 DEBUG 15744 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-05-11 12:55:35.168 DEBUG 15744 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2022-05-11 12:55:35.171 DEBUG 15744 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2022-05-11 12:58:23.300  INFO 17348 --- [main] c.f.u.s.FbolUcicServiceApplication       : Starting FbolUcicServiceApplication using Java 11 on PC0199-40435 with PID 17348 (C:\Users\okekenf01\source\repos\fbol-ucic-service\target\classes started by okekenf01 in C:\Users\okekenf01\source\repos\fbol-ucic-service)
+2022-05-11 12:58:23.313  INFO 17348 --- [main] c.f.u.s.FbolUcicServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2022-05-11 12:58:24.052  INFO 17348 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$5fa00eed] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-11 12:58:24.102  INFO 17348 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-05-11 12:58:24.995  INFO 17348 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-11 12:58:25.006  INFO 17348 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-11 12:58:25.007  INFO 17348 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-05-11 12:58:25.279  INFO 17348 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-11 12:58:25.280  INFO 17348 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1921 ms
+2022-05-11 12:58:25.365  INFO 17348 --- [main] o.s.ws.soap.saaj.SaajSoapMessageFactory  : Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2022-05-11 12:58:25.642 DEBUG 17348 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-05-11 12:58:25.710 DEBUG 17348 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-05-11 12:58:25.735 DEBUG 17348 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-05-11 12:58:25.743 DEBUG 17348 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-05-11 12:58:25.838  INFO 17348 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-11 12:58:25.848  INFO 17348 --- [main] c.f.u.s.FbolUcicServiceApplication       : Started FbolUcicServiceApplication in 3.126 seconds (JVM running for 3.793)
+2022-05-11 12:58:34.980  INFO 17348 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-11 12:58:34.982  INFO 17348 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-11 12:58:34.982 DEBUG 17348 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2022-05-11 12:58:34.983 DEBUG 17348 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2022-05-11 12:58:34.984 DEBUG 17348 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2022-05-11 12:58:34.987 DEBUG 17348 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@67ccc936
+2022-05-11 12:58:34.989 DEBUG 17348 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@44e1c37a
+2022-05-11 12:58:34.989 DEBUG 17348 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='true': request parameters and headers will be shown which may lead to unsafe logging of potentially sensitive data
+2022-05-11 12:58:34.990  INFO 17348 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2022-05-11 12:58:34.999 DEBUG 17348 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/getucic/367268", parameters={}
+2022-05-11 12:58:35.006 DEBUG 17348 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.fbol.ucic.service.controller.UcicController#getUcic(String)
+2022-05-11 12:58:35.028  INFO 17348 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: c97ea6ce-9919-4fe5-8cfa-a36878ae023b; CIS Number: 367268 setting request headers....
+2022-05-11 12:58:35.033  INFO 17348 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: c97ea6ce-9919-4fe5-8cfa-a36878ae023b; CIS Number: 367268 Request headers are set....
+2022-05-11 12:58:35.034  INFO 17348 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: c97ea6ce-9919-4fe5-8cfa-a36878ae023b; CIS Number: 367268 Creating request body....
+2022-05-11 12:58:35.035  INFO 17348 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: c97ea6ce-9919-4fe5-8cfa-a36878ae023b; CIS Number: 367268 Creating request key....
+2022-05-11 12:58:35.037  INFO 17348 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: c97ea6ce-9919-4fe5-8cfa-a36878ae023b; CIS Number: 367268 Created request key....
+2022-05-11 12:58:35.038  INFO 17348 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: c97ea6ce-9919-4fe5-8cfa-a36878ae023b; CIS Number: 367268 Creating IpArkey using CIS number....
+2022-05-11 12:58:35.041  INFO 17348 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: c97ea6ce-9919-4fe5-8cfa-a36878ae023b; CIS Number: 367268 Created IpArkey using CIS number....
+2022-05-11 12:58:35.042  INFO 17348 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: c97ea6ce-9919-4fe5-8cfa-a36878ae023b; CIS Number: 367268 Configuring list control....
+2022-05-11 12:58:35.043  INFO 17348 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: c97ea6ce-9919-4fe5-8cfa-a36878ae023b; CIS Number: 367268 List control configured....
+2022-05-11 12:58:35.044  INFO 17348 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: c97ea6ce-9919-4fe5-8cfa-a36878ae023b; CIS Number: 367268 Created request body....
+2022-05-11 12:58:35.044  INFO 17348 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: c97ea6ce-9919-4fe5-8cfa-a36878ae023b; CIS Number: 367268 Calling SOAP endpoint....
+2022-05-11 12:58:36.022 DEBUG 17348 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-05-11 12:58:36.023 DEBUG 17348 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.fbol.ucic.service.model.Ucic@5d5ea9a3]
+2022-05-11 12:58:36.039 DEBUG 17348 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2022-05-11 13:01:19.491  INFO 7416 --- [main] c.f.u.s.FbolUcicServiceApplication       : Starting FbolUcicServiceApplication using Java 11 on PC0199-40435 with PID 7416 (C:\Users\okekenf01\source\repos\fbol-ucic-service\target\classes started by okekenf01 in C:\Users\okekenf01\source\repos\fbol-ucic-service)
+2022-05-11 13:01:19.507  INFO 7416 --- [main] c.f.u.s.FbolUcicServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2022-05-11 13:01:20.295  INFO 7416 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$caff0e21] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-11 13:01:20.342  INFO 7416 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-05-11 13:01:21.221  INFO 7416 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-11 13:01:21.233  INFO 7416 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-11 13:01:21.234  INFO 7416 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-05-11 13:01:21.502  INFO 7416 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-11 13:01:21.503  INFO 7416 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1940 ms
+2022-05-11 13:01:21.590  INFO 7416 --- [main] o.s.ws.soap.saaj.SaajSoapMessageFactory  : Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2022-05-11 13:01:21.860 DEBUG 7416 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-05-11 13:01:21.936 DEBUG 7416 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-05-11 13:01:21.960 DEBUG 7416 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-05-11 13:01:21.967 DEBUG 7416 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-05-11 13:01:22.063  INFO 7416 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-11 13:01:22.072  INFO 7416 --- [main] c.f.u.s.FbolUcicServiceApplication       : Started FbolUcicServiceApplication in 3.2 seconds (JVM running for 3.864)
+2022-05-11 13:01:33.596  INFO 7416 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-11 13:01:33.598  INFO 7416 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-11 13:01:33.599 DEBUG 7416 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2022-05-11 13:01:33.600 DEBUG 7416 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2022-05-11 13:01:33.600 DEBUG 7416 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2022-05-11 13:01:33.601 DEBUG 7416 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1864e0f6
+2022-05-11 13:01:33.601 DEBUG 7416 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@43137cdc
+2022-05-11 13:01:33.602 DEBUG 7416 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='true': request parameters and headers will be shown which may lead to unsafe logging of potentially sensitive data
+2022-05-11 13:01:33.602  INFO 7416 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-05-11 13:01:33.611 DEBUG 7416 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/getucic/367268", parameters={}
+2022-05-11 13:01:33.618 DEBUG 7416 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.fbol.ucic.service.controller.UcicController#getUcic(String)
+2022-05-11 13:01:33.642  INFO 7416 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 9e883ee6-8757-42b6-866c-66386ee31803; CIS Number: 367268 setting request headers....
+2022-05-11 13:01:33.647  INFO 7416 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 9e883ee6-8757-42b6-866c-66386ee31803; CIS Number: 367268 Request headers are set....
+2022-05-11 13:01:33.647  INFO 7416 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 9e883ee6-8757-42b6-866c-66386ee31803; CIS Number: 367268 Creating request body....
+2022-05-11 13:01:33.649  INFO 7416 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 9e883ee6-8757-42b6-866c-66386ee31803; CIS Number: 367268 Creating request key....
+2022-05-11 13:01:33.651  INFO 7416 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 9e883ee6-8757-42b6-866c-66386ee31803; CIS Number: 367268 Created request key....
+2022-05-11 13:01:33.652  INFO 7416 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 9e883ee6-8757-42b6-866c-66386ee31803; CIS Number: 367268 Creating IpArkey using CIS number....
+2022-05-11 13:01:33.655  INFO 7416 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 9e883ee6-8757-42b6-866c-66386ee31803; CIS Number: 367268 Created IpArkey using CIS number....
+2022-05-11 13:01:33.656  INFO 7416 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 9e883ee6-8757-42b6-866c-66386ee31803; CIS Number: 367268 Configuring list control....
+2022-05-11 13:01:33.657  INFO 7416 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 9e883ee6-8757-42b6-866c-66386ee31803; CIS Number: 367268 List control configured....
+2022-05-11 13:01:33.658  INFO 7416 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 9e883ee6-8757-42b6-866c-66386ee31803; CIS Number: 367268 Created request body....
+2022-05-11 13:01:33.659  INFO 7416 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 9e883ee6-8757-42b6-866c-66386ee31803; CIS Number: 367268 Calling SOAP endpoint....
+2022-05-11 13:01:34.904 DEBUG 7416 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-05-11 13:01:34.905 DEBUG 7416 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.fbol.ucic.service.model.Ucic@22086d49]
+2022-05-11 13:01:34.923 DEBUG 7416 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2022-05-11 13:05:45.185  INFO 12672 --- [main] c.f.u.s.FbolUcicServiceApplication       : Starting FbolUcicServiceApplication using Java 11 on PC0199-40435 with PID 12672 (C:\Users\okekenf01\source\repos\fbol-ucic-service\target\classes started by okekenf01 in C:\Users\okekenf01\source\repos\fbol-ucic-service)
+2022-05-11 13:05:45.199  INFO 12672 --- [main] c.f.u.s.FbolUcicServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2022-05-11 13:05:45.903  INFO 12672 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$87b853c6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-05-11 13:05:45.953  INFO 12672 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-05-11 13:05:46.893  INFO 12672 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-11 13:05:46.905  INFO 12672 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-11 13:05:46.906  INFO 12672 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-05-11 13:05:47.185  INFO 12672 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-11 13:05:47.186  INFO 12672 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1936 ms
+2022-05-11 13:05:47.276  INFO 12672 --- [main] o.s.ws.soap.saaj.SaajSoapMessageFactory  : Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2022-05-11 13:05:47.583 DEBUG 12672 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-05-11 13:05:47.654 DEBUG 12672 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-05-11 13:05:47.678 DEBUG 12672 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-05-11 13:05:47.686 DEBUG 12672 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-05-11 13:05:47.787  INFO 12672 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-11 13:05:47.796  INFO 12672 --- [main] c.f.u.s.FbolUcicServiceApplication       : Started FbolUcicServiceApplication in 3.218 seconds (JVM running for 3.902)
+2022-05-11 13:06:01.179  INFO 12672 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-11 13:06:01.182  INFO 12672 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-11 13:06:01.182 DEBUG 12672 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2022-05-11 13:06:01.183 DEBUG 12672 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2022-05-11 13:06:01.184 DEBUG 12672 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2022-05-11 13:06:01.185 DEBUG 12672 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1f22e7
+2022-05-11 13:06:01.185 DEBUG 12672 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@379c1c5c
+2022-05-11 13:06:01.186 DEBUG 12672 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='true': request parameters and headers will be shown which may lead to unsafe logging of potentially sensitive data
+2022-05-11 13:06:01.188  INFO 12672 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2022-05-11 13:06:01.199 DEBUG 12672 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/getucic/367268", parameters={}
+2022-05-11 13:06:01.206 DEBUG 12672 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.fbol.ucic.service.controller.UcicController#getUcic(String)
+2022-05-11 13:06:01.231  INFO 12672 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 10c12eda-dbb9-4de3-bef4-3f0ab1c2a0c2; CIS Number: 367268 setting request headers....
+2022-05-11 13:06:01.237  INFO 12672 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 10c12eda-dbb9-4de3-bef4-3f0ab1c2a0c2; CIS Number: 367268 Request headers are set....
+2022-05-11 13:06:01.237  INFO 12672 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 10c12eda-dbb9-4de3-bef4-3f0ab1c2a0c2; CIS Number: 367268 Creating request body....
+2022-05-11 13:06:01.239  INFO 12672 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 10c12eda-dbb9-4de3-bef4-3f0ab1c2a0c2; CIS Number: 367268 Creating request key....
+2022-05-11 13:06:01.241  INFO 12672 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 10c12eda-dbb9-4de3-bef4-3f0ab1c2a0c2; CIS Number: 367268 Created request key....
+2022-05-11 13:06:01.242  INFO 12672 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 10c12eda-dbb9-4de3-bef4-3f0ab1c2a0c2; CIS Number: 367268 Creating IpArkey using CIS number....
+2022-05-11 13:06:01.246  INFO 12672 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 10c12eda-dbb9-4de3-bef4-3f0ab1c2a0c2; CIS Number: 367268 Created IpArkey using CIS number....
+2022-05-11 13:06:01.247  INFO 12672 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 10c12eda-dbb9-4de3-bef4-3f0ab1c2a0c2; CIS Number: 367268 Configuring list control....
+2022-05-11 13:06:01.248  INFO 12672 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 10c12eda-dbb9-4de3-bef4-3f0ab1c2a0c2; CIS Number: 367268 List control configured....
+2022-05-11 13:06:01.249  INFO 12672 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 10c12eda-dbb9-4de3-bef4-3f0ab1c2a0c2; CIS Number: 367268 Created request body....
+2022-05-11 13:06:01.253  INFO 12672 --- [http-nio-8080-exec-1] c.f.ucic.service.wsdl.client.UcicClient  : MsgUUID: 10c12eda-dbb9-4de3-bef4-3f0ab1c2a0c2; CIS Number: 367268 Calling SOAP endpoint....
+2022-05-11 13:06:02.383 DEBUG 12672 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2022-05-11 13:06:02.384 DEBUG 12672 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [com.fbol.ucic.service.model.Ucic@78a2f45f]
+2022-05-11 13:06:02.400 DEBUG 12672 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK

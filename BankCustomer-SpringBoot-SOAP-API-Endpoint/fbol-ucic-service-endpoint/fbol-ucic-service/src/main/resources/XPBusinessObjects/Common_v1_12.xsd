@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema elementFormDefault="qualified" targetNamespace="Common" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsd_1="Common">
+  <xsd:annotation>
+    <xsd:documentation>Contains common objects shared across all business domains. Example: common enumerations (valid values), amount constructs and other  reusable "data type" definitions.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexType name="Sor">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="PrcsrNme" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Processor Name
+Valid Values: 
+FIS ACBS
+FIS BancLine
+FIS BancPac
+FIS Bankway
+FIS eBanking
+FIS HORIZON
+FIS IBS
+FIS Mercury
+FIS MISER
+FIS Payments
+FIS Profile
+FIS Systematics
+Business Description:  The software processor name which along with the application name uniquely identifies the system of record.
+Comments: There is an enumeration 'Processor Name' that defines the valid values, however the data type is String and the validation is done through business logic not schema validation</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="ApplNme" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Business Name:  Application Name
+Valid Values:
+ACH
+Bill Payment
+Business Internet Banking
+Card Management
+CD
+CeB
+Checking
+Commercial
+Commercial Lending
+Core Banking
+Credit Card
+Customer
+Deposits
+Installment
+Line of Credit
+Loans
+Mobile Banking
+Mortgage
+OAC
+Other Loans
+Retirement
+Safe Deposit Box
+Savings
+Savings and Time
+Business Description:  The software application name which in combination with the processor name uniquely identifies the System of Record.
+Comments: There is an enumeration 'Application Name' that defines the valid values, however the data type is String and the validation is done through business logic not schema validation</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="SorFe">
+    <xsd:sequence>
+      <xsd:element name="SorFeId" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Business Name:  System Of Record Financial Entity ID
+Valid Values:
+Business Description:  The identifier that in combination with the SOR fields uniquely identifies a financial institution.
+Comments: The same as the value for the FeId data tag in the service request header</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="Sor" type="xsd_1:Sor">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: System of Record 
+Valid Values: 
+Business Description: Contains components used to define the system of record (SOR).
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="FeIdentifier">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:complexType name="FeRequest">
+    <xsd:choice>
+      <xsd:element name="FeId" type="xsd_1:FeIdentifier">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Financial Entity Identifier
+Valid Values: 
+Business Description: The unique identifier used to identify the financial entity (FE).
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="SorFe" type="xsd_1:SorFe">
+        <xsd:annotation>
+          <xsd:documentation>Business Name:  System Of Record Financial Entity
+Valid Values:
+Business Description: Identifies system of record uniquely.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:choice>
+  </xsd:complexType>
+  <xsd:simpleType name="OrgUnitId">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:complexType name="FeRequestKey">
+    <xsd:annotation>
+      <xsd:documentation>&lt;p&gt;Business Name: Financial Entity Request Key&lt;br&gt;Valid Values:&lt;br&gt;Business Description: Contains the specific financial entity key request information.&lt;br&gt;Comments:&lt;/p&gt;</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="FeRqst" type="xsd_1:FeRequest">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Financial Entity Request
+Valid Values: 
+Business Description: Contains the specific financial entity associated with the request.  
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="OuId" type="xsd_1:OrgUnitId">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Organization Unit Identifier
+Valid Values: 
+Business Description: The unique identifier used to identify the organization unit (OU) within org. 
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="AccessType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Admin User"/>
+      <xsd:enumeration value="Customer"/>
+      <xsd:enumeration value="System"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="RequestAccessType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="AccTyp" type="xsd_1:AccessType">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Access Type
+Valid Values:
+Admin User
+Customer
+System
+Business Description: Identifies the source of the service request.  
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ListControl">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="LstEntryVal" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Last Entry Value
+Valid Values: 
+Business Description: If HasMore equals true, repeat the call above, passing in the returned LstEntryVal, until all applicable information is retrieved; this will be indicated by the HasMore element tag being equal to false.  As an example, in the input payload the value entered for NbrOfEnty is 50.  If there are 55 accounts related to the service arrangement sent in on the request, the first 50 are retrieved and the HasMore tag is set to true.  The LstEntryVal will contain repositioning data that will allow the subsequent call to retrieve the 51st record and so on until the HasMore tag equals false indicating that all records have now been retrieved.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="NbrOfEnty" type="xsd:positiveInteger">
+        <xsd:annotation>
+          <xsd:documentation>Business Name:  Number of Entities
+Valid Values:
+Business Description:  The value specified by the consumer of the service to indicate the maximum number of records to retrieve within a single call.  
+Comments:  When this data tag is not provided, the service will default the number returned to the service default value.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="RqstSetSize" type="xsd:positiveInteger">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Request Set Size
+Valid Values: 
+Business Description: 
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ListControlOutput">
+    <xsd:sequence>
+      <xsd:element name="HasMore" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Has More 
+Valid Values:
+true
+false
+Business Description: Identifies whether more data exists than could be returned in one call.  A value of true indicates there is more data.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="LstEntryVal" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Last Entry Value
+Valid Values: 
+Business Description: If HasMore equals true, repeat the call above, passing in the returned LstEntryVal, until all applicable information is retrieved; this will be indicated by the HasMore element tag being equal to false.  As an example, in the input payload the value entered for NbrOfEnty is 50.  If there are 55 accounts related to the service arrangement sent in on the request, the first 50 are retrieved and the HasMore tag is set to true.  The LstEntryVal will contain repositioning data that will allow the subsequent call to retrieve the 51st record and so on until the HasMore tag equals false indicating that all records have now been retrieved.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="NbrOfEnty" type="xsd:nonNegativeInteger">
+        <xsd:annotation>
+          <xsd:documentation>Business Name:  Number of Entities
+Valid Values:
+Business Description:  The value specified by the consumer of the service to indicate the maximum number of records to retrieve within a single call.  
+Comments:  When this data tag is not provided, the service will default the number returned to the service default value.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="TotlRcrds" type="xsd:nonNegativeInteger">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Total Records
+Valid Values: 
+Business Description: 
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="FeResponseKey">
+    <xsd:annotation>
+      <xsd:documentation>&lt;p&gt;Business Name: Financial Entity Response Key&lt;br&gt;Valid Values:&lt;br&gt;Business Description: Contains key information identifying the financial entity associated with the response.&lt;br&gt;Comments: Even though FeId and SorFe are both optional, one or both must be returned from the service&lt;/p&gt;</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="FeId" type="xsd_1:FeIdentifier">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Financial Entity Identifier
+Valid Values: 
+Business Description: The unique identifier used to identify the financial entity (FE).
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="SorFe" type="xsd_1:SorFe">
+        <xsd:annotation>
+          <xsd:documentation>Business Name:  System Of Record Financial Entity
+Valid Values:
+Business Description: Identifies the financial entity (FE) to the system of record uniquely.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

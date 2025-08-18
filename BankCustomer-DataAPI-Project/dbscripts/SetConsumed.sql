@@ -1,0 +1,20 @@
+/****** Object:  Table [dbo].[SetConsumed]    Script Date: 9/19/2022 5:19:30 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[SetConsumed](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[TBL] [varchar](200) NULL,
+	[KEYS] [varchar](2000) NULL,
+	[DOC] [varchar](max) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+

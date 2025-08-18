@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema elementFormDefault="qualified" targetNamespace="FisCommonRspHdr" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsd_1="FisCommonRspHdr">
+  <xsd:simpleType name="tMsgType">
+    <xsd:annotation>
+      <xsd:documentation>
+						system error - example: network connection has been dropped
+						Application Error - example: numeric overflow
+						Business Logic Error - example: transactions cannot be processed against
+						closed account
+						Validation Error - example: expiration date falls before start date
+						Informational Message - example: customer address found but is
+						missing zip code</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="System Error"/>
+      <xsd:enumeration value="Application Error"/>
+      <xsd:enumeration value="Validation Error"/>
+      <xsd:enumeration value="Informational Message"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="tPrmtrTyp">
+    <xsd:annotation>
+      <xsd:documentation>
+						Specifies whether a parameter is of type code, value code, or value. Code
+						parameters represents items from the Business Glossary. Value code
+						parameters are unique codes, each code representing one of
+						acceptable values
+						of a particular Business Glossary item. Value parameters represent
+						values.
+   </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Code"/>
+      <xsd:enumeration value="Value"/>
+      <xsd:enumeration value="Value Code"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="tLocale">
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="5"/>
+      <xsd:pattern value="[a-z]{2}-[A-Z]{2}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="tSpcfrId">
+    <xsd:annotation>
+      <xsd:documentation>Value between 0 - 99 specifying a place holder with the
+						message template</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:int">
+      <xsd:maxInclusive value="99"/>
+      <xsd:minInclusive value="0"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="tUuid">
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="36"/>
+      <xsd:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="tRspHdr">
+    <xsd:sequence>
+      <xsd:element name="RspHdrVer">
+        <xsd:annotation>
+          <xsd:documentation>Response Header Version. Currently 2.0.0</xsd:documentation>
+        </xsd:annotation>
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="2.0.0"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="RtnCde" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Return code. Indicates success or failure processing the
+							service request. MsgLst contains detailed description of
+							informational or error messages.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="MsgUuid" type="xsd_1:tUuid">
+        <xsd:annotation>
+          <xsd:documentation>Tracking Id that was sent in the request header.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="ActyId" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Consumer defined used for tracking purposes.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Lcl" type="xsd_1:tLocale">
+        <xsd:annotation>
+          <xsd:documentation>Must follow standard specificed by internationalization
+							project RFC4646. Format is two letters followed by a dash
+							followed by two letters, example: en-US</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="ServPrmtrsLst">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="ServPrmtrs">
+              <xsd:annotation>
+                <xsd:documentation>Each ServPrmtrs aggregate represents service parameters for
+								a service that is a part of a bundled services request. Ignore
+								otherwise.</xsd:documentation>
+              </xsd:annotation>
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="FeId" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>Financial entity Id</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element name="ServId" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>Service Identifier</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element name="ServVer" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>Consumer supplied version number. Format is
+									major.minor.revision </xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element name="ApplId" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>Application associated with this service request.</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="DataLnkId" type="xsd:string">
+                    <xsd:annotation>
+                      <xsd:documentation>Unique ID that is used to associate these paramenters with
+									the corresponding response data. (Used for bundled service
+									reponses)</xsd:documentation>
+                    </xsd:annotation>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="FldLst">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element maxOccurs="unbounded" name="Fld">
+                          <xsd:complexType>
+                            <xsd:sequence>
+                              <xsd:element name="FldNme" type="xsd:string"/>
+                              <xsd:element name="FldVal" type="xsd:string"/>
+                            </xsd:sequence>
+                          </xsd:complexType>
+                        </xsd:element>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="MsgLst" type="xsd_1:tMsgLst"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="tMsgLst">
+    <xsd:annotation>
+      <xsd:documentation>This is an ordered list of messages that occurred in the
+						service. The first message in the list was generated by the
+						client-facing service. Any subsequent messages were generated by
+						any subsystem service(s).</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" name="Msg">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="MsgCde" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>The code uniquely identifying the message.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="Typ" type="xsd_1:tMsgType">
+              <xsd:annotation>
+                <xsd:documentation>System Error - example: network connection has been dropped
+								Application Error - example: transactions cannot be processed
+								against closed account
+								Validation Error - example: expiration date falls before start date
+								Informational Message - example: customer address found but is
+								missing zip code</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="DataLnkId" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>Unique ID that is used to associate this message with the
+								corresponding response data. (Used for bundled service
+								responses)</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="MsgLcl" type="xsd_1:tLocale">
+              <xsd:annotation>
+                <xsd:documentation>Locale of this message. Must follow standard specified by
+								internationalization project RFC4646. Format is two letters
+								followed by a dash followed by two letters, example: en-US</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="Txt" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>The Text node may contain parameter specifications.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="PrmtrLst">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element maxOccurs="unbounded" name="Prmtr">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element name="SpcfrId" type="xsd_1:tSpcfrId">
+                          <xsd:annotation>
+                            <xsd:documentation>Specifies parameter's index in the message.</xsd:documentation>
+                          </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element name="PrmtrTyp" type="xsd_1:tPrmtrTyp">
+                          <xsd:annotation>
+                            <xsd:documentation>Specifies whether a parameter is of type Code, Value
+										Code, or Value. Code parameter types represent items defined
+										in a business glossary or data dictionary. Value Code
+										parameter types are unique codes, each code representing one
+										of acceptable values of a particular business glossary or data
+										dictionary item. Value parameter types represent values.</xsd:documentation>
+                          </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element name="Cde" type="xsd:string">
+                          <xsd:annotation>
+                            <xsd:documentation>Business item code as specified in the Business Glossary.
+										If set to "0", the parameter does not represent any
+										business item</xsd:documentation>
+                          </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="ValCde" type="xsd:string">
+                          <xsd:annotation>
+                            <xsd:documentation>If PrmtrTyp element is "Value Code", this field
+										represents one of the acceptable codes of the business item
+										identified by the Cde element. Ignore otherwise.</xsd:documentation>
+                          </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="Val" type="xsd:string">
+                          <xsd:annotation>
+                            <xsd:documentation>If PrmtrTyp element is "Value", this field
+										represents a value: if Cde element is not "0", the
+										value of this field is associated with the business item
+										identified by the Cde element. Ignore if PrmtrTyp is not
+										"Value".</xsd:documentation>
+                          </xsd:annotation>
+                        </xsd:element>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="RspHdr" type="xsd_1:tRspHdr"/>
+</xsd:schema>

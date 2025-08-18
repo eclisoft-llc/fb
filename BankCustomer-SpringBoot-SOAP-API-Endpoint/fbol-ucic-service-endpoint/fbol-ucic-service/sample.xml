@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header>
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" SOAP-ENV:mustUnderstand="1">
+         <wsse:BinarySecurityToken EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3" wsu:Id="X509-d7ddf1ad-99c0-41cc-99ee-011a8ecdebfa">MIIEOjCCAyKgAwIBAgIQOUP1Xgq/W7ZN4SpUMjgggDANBgkqhkiG9w0BAQUFADB3MQswCQYDVQQGEwJVUzELMAkGA1UECAwCTU8xEjAQBgNVBAcMCUhhemVsd29vZDEUMBIGA1UECgwLRmlyc3QgQmFpbmsxCzAJBgNVBAsMAklUMSQwIgYDVQQDDBtwaW5wb2ludC51YXQuZmlyc3RiYW5rcy5uZXQwHhcNMjIwNDE5MjIwMTM3WhcNMjMwNDE5MjIyMTM3WjB3MQswCQYDVQQGEwJVUzELMAkGA1UECAwCTU8xEjAQBgNVBAcMCUhhemVsd29vZDEUMBIGA1UECgwLRmlyc3QgQmFpbmsxCzAJBgNVBAsMAklUMSQwIgYDVQQDDBtwaW5wb2ludC51YXQuZmlyc3RiYW5rcy5uZXQwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCuVpugWFp96XmZkjfdweXpPPasTmuLB7zhp35vmTlSmXA/fOMQu7TMNa0p9a0Lp1fEM8izhpFPMcwg4s48xnzIZMxPlbQh3dsm3V8RzJRlvCcN8FP70wT2ILp02tWulHSazVpl6lXTNv4Dh6elDp0GFCF3PRLx8dEJjq3QNu07/H3XMOvlLee88EcnHKSO/3HYOjrYoIuC+hKc+Z8NNs304QVu5eUycFiw3LDX6YDXyu2IfpBi//IXtMx188Y119TXs6jMgQ1rLvZ7S9cBmlxU++2w04BDuLjhb+bTgghOFIfa8Z65RWr09BRCcugewy1JfCphL+c/eyCu4pz6hKK7AgMBAAGjgcEwgb4wDgYDVR0PAQH/BAQDAgTwMBMGA1UdJQQMMAoGCCsGAQUFBwMBMHgGCSqGSIb3DQEJDwRrMGkwDgYIKoZIhvcNAwICAgCAMA4GCCqGSIb3DQMEAgIAgDALBglghkgBZQMEASowCwYJYIZIAWUDBAEtMAsGCWCGSAFlAwQBAjALBglghkgBZQMEAQUwBwYFKw4DAgcwCgYIKoZIhvcNAwcwHQYDVR0OBBYEFApgF00tE08Bz9ed84AoCPieW5nmMA0GCSqGSIb3DQEBBQUAA4IBAQAlGiJ8+HJcoc5CslaCCJoNGzfX9aApymuP2Z4Teg0NcfJOf56uuSp4tlNHggrTZ+XV6YSjm89lejE70g7aDsyjTPQvt1JSHVemiJOpJCjbizGBHQe0hInp4+AySHv+jpdZ799s086yoNWswVhUZV0sqHYtEjcKzfk55kMdt3ELGYS3p8fVuuRAck2xwsMfsQPU+ViwQaKuD35S5Xq77jK68tvq79PO8gFLmvEN7vHu3CTL/LoXhbVvuHyRzHAcF1dFFAV792ywRLZ/c1ntVHtHdNot3viu4VcGmaUExz3rVCbeV81ctobLbqCONNSgNCMQ0p45IfwdUnq9mQTC9d4J</wsse:BinarySecurityToken>
+         <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="SIG-7fcdb872-beb0-49c9-9027-4040be6c7d9d">
+            <ds:SignedInfo>
+               <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
+                  <ec:InclusiveNamespaces xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#" PrefixList="SOAP-ENV" />
+               </ds:CanonicalizationMethod>
+               <ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" />
+               <ds:Reference URI="#id-bf659dd0-e526-48f5-b33f-1766b0f29403">
+                  <ds:Transforms>
+                     <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+                  </ds:Transforms>
+                  <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+                  <ds:DigestValue>WSHc5llP379XoyDKIJBYIv72ayPTXWT+TK8+PutnZNQ=</ds:DigestValue>
+               </ds:Reference>
+            </ds:SignedInfo>
+            <ds:SignatureValue>eXKRXX+8yufTE+9yj7KarP1PT4nPKSp3XNi8AmfatpkqbHcOGo3EjL0syauXA/Ro+WLBUNg/A/JwzA4PXSxKMQ2XTijzjPEQrAnCvQo2I7WQpwsT85PW8hAg9b/bXxHOTghooBdqBjDk5LU7GJYXc7H8nBwfdc5c4OeAzZwZK4onS8nFhnudLptZsCFqzbc9smyBj8HkLgUKIbMLam7zBlqwJYJHXq7s0qiekbgnWC00lOLXVSGP1KzQLwOfmrx60/l+zoKLSzWhYB4/cbGZ1sl/xsbVKjhp+ZwPguBX56b1Unt19Dw9V35Brt0tHgE+ICSyW80aRIzbAyrFgD/mOg==</ds:SignatureValue>
+            <ds:KeyInfo Id="KI-27ae458f-cd99-4038-b019-9582bf88aaa7">
+               <wsse:SecurityTokenReference wsu:Id="STR-62354202-c649-44da-9d07-127b1c99bbbc">
+                  <wsse:Reference URI="#X509-d7ddf1ad-99c0-41cc-99ee-011a8ecdebfa" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3" />
+               </wsse:SecurityTokenReference>
+            </ds:KeyInfo>
+         </ds:Signature>
+      </wsse:Security>
+   </SOAP-ENV:Header>
+   <SOAP-ENV:Body xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="id-bf659dd0-e526-48f5-b33f-1766b0f29403">
+      <ns4:XPRetrieveIpAnlytcsMktDtlRqst xmlns:ns4="http://www.testing.com/Common" xmlns:ns10="http://www.testing.com/Communication" 
+	  xmlns:ns11="http://www.testing.com/webserice/FisCommonRspHdr" xmlns:ns12="http://www.testing.com/XPRetrieveIpAnlytcsMktDtlRsp" 
+	  xmlns:ns13="http://www.testing.com/XPInvolvedParty" xmlns:ns14="http://www.testing.com/webserice/FisCommonRqstHdr" xmlns:ns15="http://www.testing.com/webserice/XPRetrieveIpAnlytcsMktDtlRqst" xmlns:ns2="http://www.testing.com/FisCommonRqstHdr" xmlns:ns3="http://www.testing.com/ResourceItem" xmlns:ns5="http://www.testing.com/InvolvedParty" xmlns:ns6="http://www.testing.com/XPRetrieveIpAnlytcsMktDtlRqst" xmlns:ns7="http://www.testing.com/Arrangements" xmlns:ns8="'http://www.testing.com/Arrangements" xmlns:ns9="http://www.testing.com/FisCommonRspHdr">
+         <ns14:RqstHdr>
+            <ns2:RqstHdrVer>2.0.0</ns2:RqstHdrVer>
+            <ns2:MsgUuid>e4defe00-4829-4616-8ff4-889ee46108f1</ns2:MsgUuid>
+            <ns2:SrcId>firstbank</ns2:SrcId>
+            <ns2:LclPref>en-US</ns2:LclPref>
+            <ns2:Sec>
+               <ns2:TokenAuthen>
+                  <UsernameToken>
+                     <Username>okekenf01</Username>
+                  </UsernameToken>
+               </ns2:TokenAuthen>
+            </ns2:Sec>
+            <ns2:ServPrmtrsLst>
+               <ns2:ServPrmtrs>
+                  <ns2:FeId>840</ns2:FeId>
+                  <ns2:ServId>XPRtrvIpAnlytcsMktDtl</ns2:ServId>
+                  <ns2:ServVer>1.0.0</ns2:ServVer>
+                  <ns2:ApplId>XP</ns2:ApplId>
+               </ns2:ServPrmtrs>
+            </ns2:ServPrmtrsLst>
+         </ns14:RqstHdr>
+         <ns15:XPRtrvIpAnlytcsMktDtlOsi>
+            <ns6:FeRqstKey>
+               <ns4:FeRqst>
+                  <ns4:FeId>840</ns4:FeId>
+               </ns4:FeRqst>
+            </ns6:FeRqstKey>
+            <ns6:IpArKey>
+               <ns6:IpKey>
+                  <ns5:IpId>2342344</ns5:IpId>
+                  <ns5:Sor />
+               </ns6:IpKey>
+            </ns6:IpArKey>
+            <ns6:LstCntl>
+               <ns4:LstEntryVal>5</ns4:LstEntryVal>
+               <ns4:NbrOfEnty>1</ns4:NbrOfEnty>
+               <ns4:RqstSetSize>2</ns4:RqstSetSize>
+            </ns6:LstCntl>
+         </ns15:XPRtrvIpAnlytcsMktDtlOsi>
+      </ns4:XPRetrieveIpAnlytcsMktDtlRqst>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

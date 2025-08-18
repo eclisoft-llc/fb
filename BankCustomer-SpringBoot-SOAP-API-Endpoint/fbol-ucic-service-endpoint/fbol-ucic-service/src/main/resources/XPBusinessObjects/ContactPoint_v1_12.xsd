@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema elementFormDefault="qualified" targetNamespace="ContactPoint" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsd_1="ContactPoint">
+  <xsd:annotation>
+    <xsd:documentation>Phone, e-mail, addresses, contact preferences, etc.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexType name="SorContactCode">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="CntcCde" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Contact Code
+Valid Values: 
+Business Description: The system of record (SOR) contact type for the point of contact.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="SeqNbr" type="xsd:nonNegativeInteger">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: SOR Sequence Number
+Valid Values: 
+Business Description: When one or more types exist for a given contact point, (e.g. primary email) a numeric sequence number is assigned to each in order to be able to uniquely identify each entry.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="PostalAddressType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Business"/>
+      <xsd:enumeration value="Home"/>
+      <xsd:enumeration value="Mailing"/>
+      <xsd:enumeration value="Physical"/>
+      <xsd:enumeration value="Work"/>
+      <xsd:enumeration value="Other"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="EnterpriseAddressCode">
+    <xsd:sequence>
+      <xsd:element name="PstlAddrTyp" type="xsd_1:PostalAddressType">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Postal Address Type
+Valid Values: Home
+Work
+Business
+Physical
+Mailing
+Other
+Business Description: Identifies the type of postal address that is retained for an involved party.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="SeqNbr" type="xsd:positiveInteger">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Enterprise Sequence Number
+Valid Values: 
+Business Description: When one or more types exist for a given contact point, (e.g. primary email) a numeric sequence number is assigned to each in order to be able to uniquely identify each entry.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="FormattedAddressLine">
+    <xsd:sequence>
+      <xsd:element name="SeqNbr" type="xsd:positiveInteger">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Sequence Number
+Valid Values: 
+Business Description:  Used to identify a particular address line
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="LneTxt" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Address Line Tex
+Valid Values: 
+Business Description:  An address line for an Involved Party
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="LneCde" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Address Line Code
+Valid Values:
+Business Description:  A code identifying the type of address contained in the attribute Line Text
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ContactPoint">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="StrtDte" type="xsd:date">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Start Date
+Valid Values: 
+Business Description: The effective date for the contact point.
+Comments: .</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="EndDte" type="xsd:date">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: End Date
+Valid Values: 
+Business Description: The date the contact point is no longer in effect.  
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PostalAddress">
+    <xsd:complexContent>
+      <xsd:extension base="xsd_1:ContactPoint">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="AddrLne1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Business Name: Address Line 1
+Valid Values: 
+Business Description: The first line in a postal address.
+Comments:</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="AddrLne2" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Business Name: Address Line 2
+Valid Values: 
+Business Description: The second line in a postal address.
+Comments:</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="AddrLne3" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Business Name: Address Line 3
+Valid Values: 
+Business Description: The third line in a postal address.
+Comments:</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="Str" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Business Name: Street
+Valid Values: 
+Business Description: The street name portion of a postal address.
+Comments:</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="Cty" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Business Name: City
+Valid Values: 
+Business Description: The city portion of a postal address.
+Comments:</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="St" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Business Name: State
+Valid Values: 
+Business Description: The state portion of a postal address.
+Comments:</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="PstlCde" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Business Name: Postal Code
+Valid Values: 
+Business Description: The postal code (zip code) for a particular postal address.
+Comments:</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="Ctry" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Business Name: Country
+Valid Values: 
+Business Description: The country portion of a postal address.
+Comments:</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="EntprsAddrCde" type="xsd_1:EnterpriseAddressCode">
+            <xsd:annotation>
+              <xsd:documentation>Business Name: Enterprise Address Code 
+Valid Values: 
+Business Description: Contains the enterprise type code information for the postal address point of contact. 
+Comments:</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="SorAddrCde" type="xsd_1:SorContactCode">
+            <xsd:annotation>
+              <xsd:documentation>Business Name: System of Record Address Code 
+Valid Values: 
+Business Description: Contains the system of record type code information for the postal address point of contact.
+Comments:</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="FrmtAddrLne" type="xsd_1:FormattedAddressLine">
+            <xsd:annotation>
+              <xsd:documentation>Business Name: Formatted Address Line
+Valid Values: 
+Business Description:  Used to document any special core formatting of address line data
+Comments:</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:simpleType name="EmailType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Primary"/>
+      <xsd:enumeration value="Secondary"/>
+      <xsd:enumeration value="Other"/>
+      <xsd:enumeration value="Unknown"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="EnterpriseEmailCode">
+    <xsd:sequence>
+      <xsd:element name="EmailTyp" type="xsd_1:EmailType">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Email Address Type
+Valid Values: 
+Primary
+Secondary
+Other
+Unknown
+Business Description: Identifies the type of email address that is retained for an involved party.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="SeqNbr" type="xsd:positiveInteger">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Enterprise Sequence Number
+Valid Values: 
+Business Description: When one or more types exist for a given contact point, (e.g. primary email) a numeric sequence number is assigned to each in order to be able to uniquely identify each entry.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="EmailAddress">
+    <xsd:complexContent>
+      <xsd:extension base="xsd_1:ContactPoint">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Addr" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Business Name: Address 
+Valid Values: 
+Business Description: Contains the electronic mail address for an involved party.
+Comments:</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="EntprsEmailCde" type="xsd_1:EnterpriseEmailCode">
+            <xsd:annotation>
+              <xsd:documentation>Business Name: Enterprise Email Address Code 
+Valid Values: 
+Business Description: Contains the enterprise type code information for the email address point of contact. 
+Comments:</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="SorEmailCde" type="xsd_1:SorContactCode">
+            <xsd:annotation>
+              <xsd:documentation>Business Name: System of Record Email Address Code 
+Valid Values: 
+Business Description: Contains the system of record type code information for the email address point of contact.
+Comments:</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:simpleType name="PhoneType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Business"/>
+      <xsd:enumeration value="Fax"/>
+      <xsd:enumeration value="Home"/>
+      <xsd:enumeration value="Mobile"/>
+      <xsd:enumeration value="Work"/>
+      <xsd:enumeration value="Other"/>
+      <xsd:enumeration value="Unknown"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="EnterprisePhoneCode">
+    <xsd:sequence>
+      <xsd:element name="PhTyp" type="xsd_1:PhoneType">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Telephone Type
+Valid Values: 
+Home
+Work
+Mobile
+Business
+Fax
+Other
+Unknown
+Business Description: Identifies the type of telephone number that is retained for an involved party.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="SeqNbr" type="xsd:positiveInteger">
+        <xsd:annotation>
+          <xsd:documentation>Business Name: Enterprise Sequence Number
+Valid Values: 
+Business Description: When one or more types exist for a given contact point, (e.g. primary email) a numeric sequence number is assigned to each in order to be able to uniquely identify each entry.
+Comments:</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Phone">
+    <xsd:complexContent>
+      <xsd:extension base="xsd_1:ContactPoint">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Nbr" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Business Name: Full Telephone Number
+Valid Values: 
+Business Description: The string of numbers that comprises the entire telephone number.
+Comments:</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="IntlPrfx" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Business Name: International Prefix
+Valid Values: 
+Business Description: Code dialed prior to the international number.  
+Comments:</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="CtryCallngCde" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Business Name: Country Calling Code
+Valid Values: 
+Business Description: Used to reach the particular telephone system for each nation or special service.  
+Comments:</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="TrnkCde" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Business Name: Trunk Code
+Valid Values: 
+Business Description: Refers to the initial digit(s) to be dialed in a domestic call, prior to the area code (if necessary.
+Comments:</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="AreaCde" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Business Name: Area Code
+Valid Values: 
+Business Description: Used within many nations to route calls to a particular city, region or special service
+Comments:</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="TeleNbr" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Business Name: Telephone Number
+Valid Values: 
+Business Description: The seven digit number used when dialing locally.
+Comments:</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="ExtnNbr" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Business Name: Extension Number
+Valid Values: 
+Business Description: A sub-number that is used when the telephone number is either a central number or toll free number.  
+Comments:</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="TxtEnabl" type="xsd:boolean">
+            <xsd:annotation>
+              <xsd:documentation>Business Name: Text Enabled
+Valid Values: 
+true
+false
+Business Description: Identifies whether the telephone is capable of receiving a text message.
+Comments:</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="EntprsPhCde" type="xsd_1:EnterprisePhoneCode">
+            <xsd:annotation>
+              <xsd:documentation>Business Name: Enterprise Telephone Code
+Valid Values: 
+Business Description: Contains the Enterprise type code information for the telephone point of contact.
+Comments:</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="SorPhCde" type="xsd_1:SorContactCode">
+            <xsd:annotation>
+              <xsd:documentation>Business Name: System of Record Telephone Code
+Valid Values: 
+Business Description: Contains the system of record type code information for the telephone point of contact.
+Comments:</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

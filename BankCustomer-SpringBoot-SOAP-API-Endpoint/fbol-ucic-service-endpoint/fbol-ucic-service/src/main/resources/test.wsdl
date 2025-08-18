@@ -1,0 +1,51 @@
+<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="mtvnCIOpenIndvCustWSV1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns:import0="mtvnCWCIOpenIndvCustSvcReq"
+             xmlns:import1="mtvnCWCIOpenIndvCustSvcRes"
+             targetNamespace="mtvnCIOpenIndvCustWSV1" name="mtvnCIOpenIndvCustWSV1" xmlns="http://schemas.xmlsoap.org/wsdl/">
+
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Connectware Web Service Interface</documentation>
+
+    <types>
+        <xsd:schema>
+            <xsd:import schemaLocation="./CIOpenIndvCustWSV1SvcReq.xsd" namespace="mtvnCWCIOpenIndvCustSvcReq" />
+            <xsd:import schemaLocation="./CIOpenIndvCustWSV1SvcRes.xsd" namespace="mtvnCWCIOpenIndvCustSvcRes" />
+        </xsd:schema>
+    </types>
+
+    <message name="CIOpenIndvCustMtvnSvcReqMsg">
+        <documentation xmlns="http://schemas.xmlsoap.org/wsdl/" />
+        <part name="messagePart" element="import0:CIOpenIndvCustMtvnSvcReq" />
+    </message>
+    <message name="CIOpenIndvCustMtvnSvcResMsg">
+        <documentation xmlns="http://schemas.xmlsoap.org/wsdl/" />
+        <part name="messagePart" element="import1:CIOpenIndvCustMtvnSvcRes" />
+    </message>
+
+    <portType name="mtvnCWCIOpenIndvCustWSV1Interface">
+        <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">CIOpenIndvCustWSV1</documentation>
+        <operation name="CIOpenIndvCust">
+            <documentation xmlns="http://schemas.xmlsoap.org/wsdl/" />
+            <input message="tns:CIOpenIndvCustMtvnSvcReqMsg" />
+            <output message="tns:CIOpenIndvCustMtvnSvcResMsg" />
+        </operation>
+    </portType>
+
+    <binding name="mtvnCWCIOpenIndvCustWSV1" type="tns:mtvnCWCIOpenIndvCustWSV1Interface">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+        <operation name="CIOpenIndvCust">
+            <soap:operation soapAction="CIOpenIndvCustWSV1:CIOpenIndvCustMtvnSvcReqMsg" style="document" />
+            <input>
+                <soap:body use="literal" />
+            </input>
+            <output>
+                <soap:body use="literal" />
+            </output>
+        </operation>
+    </binding>
+
+    <service name="mtvnCWCIOpenIndvCustWSV1">
+        <port name="mtvnCWCIOpenIndvCustWSV1Port" binding="tns:mtvnCWCIOpenIndvCustWSV1">
+            <soap:address location="https://ih-excust-other.fisglobal.com/ConnectwareWS/CIOpenIndvCustWSV1" />
+        </port>
+    </service>
+</definitions>
